@@ -188,3 +188,5 @@ The architecture supports easy blog addition:
 ---
 
 Built for Krish · 2026
+---
+Deployed via GitHub + Netlify — auto-deploy verified 3 August 2026.
