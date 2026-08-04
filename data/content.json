@@ -1,0 +1,185 @@
+{
+  "process": [
+    {
+      "step": "01",
+      "title": "Discovery Call",
+      "duration": "30 min",
+      "description": "We dig into what you're actually trying to solve — not just what you're asking for. Free, no commitment."
+    },
+    {
+      "step": "02",
+      "title": "Scope & Proposal",
+      "duration": "1–2 days",
+      "description": "I document deliverables, timeline, and price in writing. You approve, we proceed. No surprises."
+    },
+    {
+      "step": "03",
+      "title": "Data & Design",
+      "duration": "2–4 days",
+      "description": "I map your data sources, design the architecture, and share wireframes for sign-off before building."
+    },
+    {
+      "step": "04",
+      "title": "Build & Iterate",
+      "duration": "3–10 days",
+      "description": "I build in milestones. You see progress every 2–3 days, give feedback, and we adjust as we go."
+    },
+    {
+      "step": "05",
+      "title": "Test & Validate",
+      "duration": "1–2 days",
+      "description": "Stress tests against edge cases, dataset sizes, and refresh failures. Production-grade, not prototype-grade."
+    },
+    {
+      "step": "06",
+      "title": "Delivery + Handover",
+      "duration": "1 day",
+      "description": "Walkthrough call, recorded video tutorial, and full documentation. You and your team can actually run it."
+    },
+    {
+      "step": "07",
+      "title": "30-Day Support",
+      "duration": "Included",
+      "description": "Free bug fixes, tweaks, and questions for 30 days post-delivery. After that, optional retainer."
+    }
+  ],
+  "skills": [
+    {
+      "category": "Core Excel",
+      "items": ["Advanced Formulas", "Array Formulas", "Lambda Functions", "Dynamic Arrays", "Conditional Formatting", "Data Validation"]
+    },
+    {
+      "category": "Data Engineering",
+      "items": ["Power Query (M)", "Power Pivot", "DAX", "Data Modeling", "ETL Pipelines", "Multi-source Merging"]
+    },
+    {
+      "category": "Automation",
+      "items": ["VBA", "Macros", "User Forms", "Email Automation", "PDF Generation", "Workflow Automation"]
+    },
+    {
+      "category": "Visualization",
+      "items": ["Dashboard Design", "Pivot Charts", "Sparklines", "Waterfall Charts", "Gantt Charts", "Heatmaps"]
+    },
+    {
+      "category": "Business Intelligence",
+      "items": ["KPI Design", "Financial Modeling", "Scenario Analysis", "Forecasting", "Variance Analysis", "Cohort Analysis"]
+    },
+    {
+      "category": "Domain Expertise",
+      "items": ["Finance & Accounting", "Sales Ops", "HR Analytics", "Supply Chain", "CRM Systems", "Marketing Analytics"]
+    }
+  ],
+  "whyMe": [
+    {
+      "icon": "shield",
+      "title": "Production-grade, not prototype-grade",
+      "description": "Every deliverable is documented, error-handled, and built to outlive the person who made it. If your team can't run it after I leave, I haven't done my job."
+    },
+    {
+      "icon": "clock",
+      "title": "Fast turnaround without compromise",
+      "description": "Most dashboards ship in 5–10 days. Full systems in 10–14. I don't pad timelines — I just don't quote what I can't deliver."
+    },
+    {
+      "icon": "lock",
+      "title": "NDA-friendly, data-confidential",
+      "description": "I sign NDAs, use anonymized datasets when possible, and treat your data like my own. No sub-contractors, no outsourcing — I build everything myself."
+    },
+    {
+      "icon": "refresh",
+      "title": "Built to scale, not break",
+      "description": "Power Query, modular structures, named ranges, version-controlled. When your data grows 10x, your tools shouldn't crack."
+    },
+    {
+      "icon": "chat",
+      "title": "Responsive, available, human",
+      "description": "Replies under 4 hours during business days. Weekly check-ins. No ghosting, no surprises, no excuses."
+    },
+    {
+      "icon": "trophy",
+      "title": "100% delivery rate",
+      "description": "Every project I've taken on has shipped on spec. I'd rather decline work than over-promise."
+    }
+  ],
+  "pricing": {
+    "showSection": true,
+    "note": "Pricing is indicative. Final quote depends on scope, complexity, and timeline. Every project gets a written proposal before work begins.",
+    "tiers": [
+      {
+        "name": "Starter",
+        "price": "$150–$400",
+        "tagline": "For focused, single-purpose deliverables",
+        "ideal": "Templates · Data Cleaning · Single Dashboard",
+        "includes": [
+          "1 deliverable, 1 revision round",
+          "5–7 day turnaround",
+          "Documentation included",
+          "14-day post-delivery support"
+        ],
+        "highlighted": false
+      },
+      {
+        "name": "Professional",
+        "price": "$400–$1,000",
+        "tagline": "For multi-feature dashboards & systems",
+        "ideal": "KPI Dashboards · ETL Pipelines · CRM Systems",
+        "includes": [
+          "Multi-component build",
+          "Power Query data layer",
+          "2 revision rounds",
+          "Video walkthrough",
+          "30-day support"
+        ],
+        "highlighted": true
+      },
+      {
+        "name": "Enterprise",
+        "price": "$1,000+",
+        "tagline": "For complex, multi-source business systems",
+        "ideal": "Financial Models · Full BI Systems · Custom Apps",
+        "includes": [
+          "Full discovery & design phase",
+          "Multi-source data architecture",
+          "VBA + Power Query + DAX",
+          "Unlimited revisions in scope",
+          "60-day support + training session"
+        ],
+        "highlighted": false
+      }
+    ]
+  },
+  "faqs": [
+    {
+      "q": "How do you usually price projects?",
+      "a": "Fixed price by scope, not hourly. After a 30-min discovery call I send a written proposal with deliverables, timeline, and price. You approve before any work starts."
+    },
+    {
+      "q": "What's your typical turnaround time?",
+      "a": "Templates and data cleaning: 2–5 days. Dashboards: 5–10 days. Full systems and financial models: 7–14 days. Rush delivery available at +25%."
+    },
+    {
+      "q": "Will you sign an NDA?",
+      "a": "Yes, always — for any client who requests it. Your data, business logic, and methodologies stay confidential. I work alone, so there are no sub-contractors involved."
+    },
+    {
+      "q": "What happens if I need changes after delivery?",
+      "a": "Every project includes 14–60 days of free post-delivery support (depending on tier) — bug fixes, small tweaks, and questions. After that, an optional retainer covers ongoing changes."
+    },
+    {
+      "q": "Can my team actually maintain what you build?",
+      "a": "Yes — that's the standard I build to. Every project includes documentation, a recorded video walkthrough, and a handover call. If your team can't run it without me, I haven't done my job."
+    },
+    {
+      "q": "Do you work with international clients?",
+      "a": "Most of my work is with clients in the US, UK, UAE, and Singapore. I work in your timezone for calls, deliver in your currency, and have invoicing set up for international payments."
+    },
+    {
+      "q": "What if my data is really messy?",
+      "a": "That's literally what I do. Power Query was built for exactly this. Send a sample and I'll tell you on the discovery call what's salvageable and what we need to redesign."
+    },
+    {
+      "q": "Can you upgrade an existing spreadsheet instead of starting fresh?",
+      "a": "Often — but not always. I'll review what you have and recommend honestly. Sometimes rebuilding is cheaper than patching a broken foundation."
+    }
+  ]
+}

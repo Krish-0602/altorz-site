@@ -1,0 +1,22 @@
+{
+  "testimonials": [
+    {
+      "id": "placeholder-1",
+      "active": false,
+      "rating": 5,
+      "quote": "Add your first client testimonial here. To activate, set \"active\": true. To add more, just append to this array.",
+      "name": "Client Name",
+      "title": "CFO",
+      "company": "Company Name",
+      "companyType": "Industry",
+      "avatar": "",
+      "projectRef": "executive-financial-kpi"
+    }
+  ],
+  "stats": {
+    "averageRating": "5.0",
+    "totalReviews": "—",
+    "responseTime": "< 4 hours",
+    "deliveredOnTime": "100%"
+  }
+}

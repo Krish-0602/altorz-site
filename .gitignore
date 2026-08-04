@@ -1,0 +1,27 @@
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment / secrets
+.env
+.env.local
+*.key
+*.pem
+github-token.txt
+
+# Netlify local
+.netlify/
+
+# Zip backups
+*.zip
+*.zip.zip
+
+# Node (if we ever add tooling later)
+node_modules/

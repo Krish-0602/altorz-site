@@ -1,0 +1,52 @@
+{
+  "name": "Krish Borade",
+  "initials": "KB",
+  "title": "Excel Specialist & Analytics Consultant",
+  "tagline": "I turn messy spreadsheets into executive intelligence systems.",
+  "location": "Mumbai, India · Working globally",
+  "avatar": "assets/images/Fiverr_Profile.png",
+  "yearsExperience": "3+",
+  "projectsDelivered": "40+",
+  "happyClients": "25+",
+  "hoursAutomated": "1,200+",
+  "bio": {
+    "short": "I help founders, finance teams, and operations leaders replace fragile spreadsheets with automated, executive-grade Excel systems — dashboards, financial models, Power Query ETL pipelines, and VBA-driven workflows that actually scale.",
+    "long": [
+      "Most businesses don't have a data problem. They have a clarity problem. Spreadsheets get reused, copy-pasted, patched — until nobody trusts the numbers anymore.",
+      "I rebuild that infrastructure from the inside out. My specialty is converting fragile, manual Excel work into automated systems your team can actually run: KPI dashboards leadership can read in 30 seconds, Power Query pipelines that ingest messy data without human touch, VBA tools that eliminate repetitive tasks, and financial models robust enough to brief investors.",
+      "Currently a CRM Executive at a B2B manufacturing firm by day, I freelance on premium Excel automation projects for clients across India, the US, UK, and Middle East. Every deliverable is built to a single standard: production-ready, documented, and built to outlive the person who made it."
+    ]
+  },
+  "valueProps": [
+    {
+      "metric": "1,200+",
+      "label": "Hours saved",
+      "description": "across automation pipelines"
+    },
+    {
+      "metric": "40+",
+      "label": "Systems shipped",
+      "description": "dashboards, models, ETL flows"
+    },
+    {
+      "metric": "12+",
+      "label": "Industries served",
+      "description": "finance, retail, HR, ops, SaaS"
+    },
+    {
+      "metric": "100%",
+      "label": "Delivery rate",
+      "description": "every project, on spec"
+    }
+  ],
+  "contact": {
+    "email": "krshborade@gmail.com",
+    "phone": "+91 9769178530",
+    "whatsapp": "https://wa.me/919372910551",
+        "calendly": "https://cal.com/krish-borade/30-min-consultation"
+  },
+  "availability": {
+    "status": "available",
+    "label": "Available for new projects · May 2026"
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "services": [
+    {
+      "id": "executive-dashboards",
+      "icon": "chart",
+      "title": "Executive Dashboards",
+      "tagline": "Reports your CEO will actually open",
+      "description": "Pixel-perfect KPI dashboards engineered for board rooms — interactive filters, scenario toggles, and zero refresh delay. Built on Power Query so the data updates itself.",
+      "deliverables": [
+        "Executive summary view",
+        "Drill-down by region/department/period",
+        "Auto-refresh data model",
+        "Print/export-ready layouts"
+      ],
+      "startingFrom": "$350",
+      "timeline": "5–10 days"
+    },
+    {
+      "id": "financial-modeling",
+      "icon": "trending",
+      "title": "Financial Modeling",
+      "tagline": "Models you can defend in a fundraise",
+      "description": "Three-statement models, scenario analysis, DCF valuations, and forecasting engines built to investor and auditor standards. Fully documented, fully auditable.",
+      "deliverables": [
+        "P&L, balance sheet, cash flow",
+        "Scenario manager (best/base/worst)",
+        "Sensitivity & valuation outputs",
+        "Assumption documentation"
+      ],
+      "startingFrom": "$500",
+      "timeline": "7–14 days"
+    },
+    {
+      "id": "power-query-etl",
+      "icon": "flow",
+      "title": "Power Query ETL",
+      "tagline": "Stop cleaning data manually. Forever.",
+      "description": "Automated data pipelines that ingest from CSVs, ERP exports, and web sources — clean, merge, transform, and load into your reporting layer with one button.",
+      "deliverables": [
+        "Multi-source data pipeline",
+        "Cleaning + transformation logic",
+        "Master consolidated model",
+        "Refresh log + data dictionary"
+      ],
+      "startingFrom": "$400",
+      "timeline": "5–10 days"
+    },
+    {
+      "id": "vba-automation",
+      "icon": "bolt",
+      "title": "VBA Automation",
+      "tagline": "Eliminate the work nobody wants to do",
+      "description": "Custom macros and Excel applications that automate reports, generate documents, send emails, and manage workflows — anything repetitive becomes one click.",
+      "deliverables": [
+        "Custom macros & UDFs",
+        "User forms & UI",
+        "Email/PDF automation",
+        "Error handling + documentation"
+      ],
+      "startingFrom": "$300",
+      "timeline": "4–8 days"
+    },{
+      "id": "custom-ribbon-tools",
+      "icon": "ribbon",
+      "title": "Custom Excel Automation Tools",
+      "tagline": "Software, built into Excel",
+      "description": "Ribbon-integrated productivity tools that live as a custom tab inside Excel — your team's repetitive workflow becomes one-click buttons. Like an enterprise add-in, built bespoke to how you actually work.",
+      "deliverables": [
+        "Custom ribbon tab with grouped commands",
+        "Workflow-specific automation buttons",
+        "Data quality reporting engine",
+        "Documentation + training walkthrough"
+      ],
+      "startingFrom": "$300",
+      "timeline": "7–21 days"
+    },
+    {
+      "id": "mis-reporting",
+      "icon": "report",
+      "title": "MIS Reporting Systems",
+      "tagline": "Monthly reports that build themselves",
+      "description": "End-to-end management information systems — data entry forms, validations, automated calculations, and management reports that compile in seconds, not days.",
+      "deliverables": [
+        "Structured data entry layer",
+        "Auto-calculated MIS",
+        "Department/period rollups",
+        "Variance & trend analysis"
+      ],
+      "startingFrom": "$450",
+      "timeline": "7–12 days"
+    },
+    {
+      "id": "data-cleaning",
+      "icon": "broom",
+      "title": "Data Cleaning & Migration",
+      "tagline": "From CSV chaos to clean datasets",
+      "description": "Take any messy dataset — duplicates, inconsistent formats, broken types, missing values — and return it production-clean, validated, and ready for analytics.",
+      "deliverables": [
+        "Deduplication & normalization",
+        "Format standardization",
+        "Validation rule set",
+        "Before/after audit log"
+      ],
+      "startingFrom": "$150",
+      "timeline": "2–5 days"
+    },
+    {
+      "id": "crm-systems",
+      "icon": "users",
+      "title": "CRM & Sales Systems",
+      "tagline": "Track every lead. Close more deals.",
+      "description": "Custom Excel CRMs with pipeline tracking, follow-up automation, lead scoring, and sales analytics — purpose-built for teams that have outgrown spreadsheets but aren't ready for Salesforce.",
+      "deliverables": [
+        "Lead capture & pipeline",
+        "Follow-up command center",
+        "Revenue forecasting",
+        "Rep performance analytics"
+      ],
+      "startingFrom": "$500",
+      "timeline": "7–14 days"
+    },
+    {
+      "id": "inventory-systems",
+      "icon": "box",
+      "title": "Inventory & Supply Chain",
+      "tagline": "Know what to reorder, before you run out",
+      "description": "Inventory management systems with stock tracking, reorder alerts, supplier scorecards, demand forecasting, and warehouse utilization analytics.",
+      "deliverables": [
+        "Stock management workbook",
+        "Reorder point automation",
+        "Supplier OTD analytics",
+        "Demand forecasting"
+      ],
+      "startingFrom": "$450",
+      "timeline": "7–12 days"
+    },
+    {
+      "id": "hr-analytics",
+      "icon": "people",
+      "title": "HR & Workforce Analytics",
+      "tagline": "Attendance, attrition, performance — solved",
+      "description": "HRMS-grade Excel systems: attendance tracking, leave management, attrition analytics, performance scorecards, and workforce planning dashboards.",
+      "deliverables": [
+        "Attendance & leave system",
+        "Workforce dashboard",
+        "Attrition risk analytics",
+        "Performance scorecards"
+      ],
+      "startingFrom": "$400",
+      "timeline": "6–10 days"
+    }
+  ]
+}
