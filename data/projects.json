@@ -87,35 +87,6 @@
       "customBuildNote": "DataCleanerPro is one example. I build ribbon-integrated tools tailored to any team's workflow — finance reconciliation, HR onboarding, CRM hygiene, MIS automation, QA validation. Your repetitive process becomes a one-click button on your own custom Excel tab."
     },
     {
-      "id": "datacleanerpro-ribbon-tool",
-      "title": "DataCleanerPro — Custom Excel Ribbon Tool",
-      "category": "automation",
-      "categoryLabel": "Automation Product",
-      "featured": true,
-      "image": "assets/images/DataCleanerPro_Ribbon_Tool.png",
-      "thumbnail": "assets/images/DataCleanerPro_Ribbon_Tool.png",
-      "tagline": "Not a spreadsheet. A productivity product built into Excel.",
-      "problem": "Analysts and admin teams burn hours every week on the same manual data hygiene — fixing casing, trimming spaces, standardizing phone numbers and dates, validating emails, killing duplicates, reformatting currency. Every dataset, every week, by hand. Error-prone, soul-crushing, and impossible to scale.",
-      "solution": "DataCleanerPro is a custom Excel ribbon tab — it installs alongside Home, Insert and Data, exactly like an enterprise add-in. 60+ one-click commands grouped into Text Casing, Trim & Clean, Numbers & INR, Dates, Emails, Phone Numbers, Duplicates, Standardization, Sheet Utilities, and a one-click Data Quality Report. Messy data in, audit-clean data out, in seconds.",
-      "outcome": "What took an analyst 2–3 hours per dataset now takes under 60 seconds. Zero manual cleaning errors. The same tool works on every file, forever — and it's fully customizable to any team's workflow.",
-      "features": [
-        "Custom ribbon tab — installs like an enterprise add-in",
-        "Text Casing: Upper, Lower, Proper, Sentence",
-        "Trim & Clean: spaces, non-print & special characters, blank flagging",
-        "Numbers & INR: ₹ format, Lakhs, percentage, rounding, text-to-number",
-        "Date Tools: DD-MMM-YYYY, text-to-date, invalid-date flagging",
-        "Email & Phone utilities: validate, +91 formatting, 10-digit normalization",
-        "Duplicate management: highlight, remove, count, prevent",
-        "Standardization: gender, Yes/No, name splitting, outlier flagging",
-        "One-click Data Quality Report",
-        "Utilities: freeze header, autofit, print area, CSV export"
-      ],
-      "stack": ["Excel", "VBA", "Custom Ribbon XML", "Office Add-in"],
-      "tags": ["Automation Product", "Custom Tool", "Productivity"],
-      "industry": "Cross-industry · Finance / HR / MIS / CRM / Ops",
-      "customBuildNote": "DataCleanerPro is one example. I build ribbon-integrated tools tailored to any team's workflow — finance reconciliation, HR onboarding, CRM hygiene, MIS automation, QA validation. Your repetitive process becomes a one-click button on your own custom Excel tab."
-    },
-    {
       "id": "crm-tracking-automation",
       "title": "CRM Sales Command Center",
       "category": "systems",

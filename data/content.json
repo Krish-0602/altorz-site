@@ -4,43 +4,43 @@
       "step": "01",
       "title": "Discovery Call",
       "duration": "30 min",
-      "description": "We dig into what you're actually trying to solve — not just what you're asking for. Free, no commitment."
+      "description": "We dig into what you're actually trying to solve — not just what you're asking for. Free, no commitment. If Altorz isn't the fit, I'll say so on the call."
     },
     {
       "step": "02",
       "title": "Scope & Proposal",
-      "duration": "1–2 days",
+      "duration": "1-2 days",
       "description": "I document deliverables, timeline, and price in writing. You approve, we proceed. No surprises."
     },
     {
       "step": "03",
       "title": "Data & Design",
-      "duration": "2–4 days",
-      "description": "I map your data sources, design the architecture, and share wireframes for sign-off before building."
+      "duration": "2-4 days",
+      "description": "I map your data sources, design the ribbon architecture, and share wireframes for sign-off before building."
     },
     {
       "step": "04",
       "title": "Build & Iterate",
-      "duration": "3–10 days",
-      "description": "I build in milestones. You see progress every 2–3 days, give feedback, and we adjust as we go."
+      "duration": "3-10 days",
+      "description": "I build in milestones. You see progress every 2–3 days, give feedback, and we adjust as we go - not at the end."
     },
     {
       "step": "05",
       "title": "Test & Validate",
       "duration": "1–2 days",
-      "description": "Stress tests against edge cases, dataset sizes, and refresh failures. Production-grade, not prototype-grade."
+      "description": "Stress tests against edge cases, real dataset sizes, and refresh failures. Every Altorz systems ships Production-grade, not prototype-grade."
     },
     {
       "step": "06",
       "title": "Delivery + Handover",
       "duration": "1 day",
-      "description": "Walkthrough call, recorded video tutorial, and full documentation. You and your team can actually run it."
+      "description": "Ribbon installation on your teams's laptops, walkthrough call, recorded video tutorial, and a formal SOP documentation. You and your team can actually run it without me."
     },
     {
       "step": "07",
-      "title": "30-Day Support",
+      "title": "30-45 Day Support",
       "duration": "Included",
-      "description": "Free bug fixes, tweaks, and questions for 30 days post-delivery. After that, optional retainer."
+      "description": "Free bug fixes, tweaks, and questions for 30-45 days post-delivery (project-dependent). After that, optional AMC retainer for ongoing changes."
     }
   ],
   "skills": [
@@ -54,7 +54,7 @@
     },
     {
       "category": "Automation",
-      "items": ["VBA", "Macros", "User Forms", "Email Automation", "PDF Generation", "Workflow Automation"]
+      "items": ["VBA", "Macros", "User Forms", "Ribbon Add-ins", "Email Automation", "PDF Generation", "Workflow Automation"]
     },
     {
       "category": "Visualization",
@@ -62,7 +62,7 @@
     },
     {
       "category": "Business Intelligence",
-      "items": ["KPI Design", "Financial Modeling", "Scenario Analysis", "Forecasting", "Variance Analysis", "Cohort Analysis"]
+      "items": ["KPI Design", "MIS Reporting", "Financial Modeling", "Scenario Analysis", "Forecasting", "Variance Analysis", "Cohort Analysis"]
     },
     {
       "category": "Domain Expertise",
@@ -73,12 +73,17 @@
     {
       "icon": "shield",
       "title": "Production-grade, not prototype-grade",
-      "description": "Every deliverable is documented, error-handled, and built to outlive the person who made it. If your team can't run it after I leave, I haven't done my job."
+      "description": "Every Altorz system is deliverable is documented, error-handled, and built to outlive the person who made it. If your team can't run it after I leave, I haven't done my job."
     },
     {
       "icon": "clock",
       "title": "Fast turnaround without compromise",
-      "description": "Most dashboards ship in 5–10 days. Full systems in 10–14. I don't pad timelines — I just don't quote what I can't deliver."
+      "description": "Most dashboards ship in 5-10 days. Full systems in 10-14. I don't pad timelines — I just don't quote what I can't deliver."
+    },
+    {
+      "icon": "gear",
+      "title": "Delivered as installed software, not a file",
+      "description": "Every system ships through the Altorz Riboon™ — a branded add-in installed on your team's Excel. One-click access to every automation. Not a scattered set of macro files."
     },
     {
       "icon": "lock",
@@ -87,13 +92,18 @@
     },
     {
       "icon": "refresh",
-      "title": "Built to scale, not break",
-      "description": "Power Query, modular structures, named ranges, version-controlled. When your data grows 10x, your tools shouldn't crack."
+      "title": "Built to scale with your business",
+      "description": "Power Query, modular ribbon structures, named ranges, version-controlled. When your data grows 10x, your tools shouldn't crack."
     },
     {
       "icon": "chat",
       "title": "Responsive, available, human",
-      "description": "Replies under 4 hours during business days. Weekly check-ins. No ghosting, no surprises, no excuses."
+      "description": "Replies under 4 hours during business days. Direct WhatsApp line to me, not a support ticket queue. Weekly check-ins. No ghosting, no surprises, no excuses."
+    },
+    {
+      "icon": "star",
+      "title": "Insider-built, not textbook-built",
+      "description": "I work full-time inside a B2B manufacturing operation. Every Altorz system is built with real operator knowledge."
     },
     {
       "icon": "trophy",
@@ -102,68 +112,111 @@
     }
   ],
   "pricing": {
-    "showSection": true,
-    "note": "Pricing is indicative. Final quote depends on scope, complexity, and timeline. Every project gets a written proposal before work begins.",
-    "tiers": [
-      {
-        "name": "Starter",
-        "price": "$150–$400",
-        "tagline": "For focused, single-purpose deliverables",
-        "ideal": "Templates · Data Cleaning · Single Dashboard",
-        "includes": [
-          "1 deliverable, 1 revision round",
-          "5–7 day turnaround",
-          "Documentation included",
-          "14-day post-delivery support"
-        ],
-        "highlighted": false
-      },
-      {
-        "name": "Professional",
-        "price": "$400–$1,000",
-        "tagline": "For multi-feature dashboards & systems",
-        "ideal": "KPI Dashboards · ETL Pipelines · CRM Systems",
-        "includes": [
-          "Multi-component build",
-          "Power Query data layer",
-          "2 revision rounds",
-          "Video walkthrough",
-          "30-day support"
-        ],
-        "highlighted": true
-      },
-      {
-        "name": "Enterprise",
-        "price": "$1,000+",
-        "tagline": "For complex, multi-source business systems",
-        "ideal": "Financial Models · Full BI Systems · Custom Apps",
-        "includes": [
-          "Full discovery & design phase",
-          "Multi-source data architecture",
-          "VBA + Power Query + DAX",
-          "Unlimited revisions in scope",
-          "60-day support + training session"
-        ],
-        "highlighted": false
-      }
-    ]
-  },
+  "showSection": true,
+  "note": "Pricing is indicative. Final pricing depends on scope, complexity, data sources, and timeline. Every project receives a written proposal after a discovery call and before work begins.",
+  "tiers": [
+    {
+      "name": "Standard",
+      "price": "Starting ₹7,500",
+      "tagline": "Fix it. Clean it. Build it better.",
+      "ideal": "Small businesses and teams that need a focused Excel solution, improvement, cleanup, or a single reporting system.",
+      "includes": [
+        "Excel data cleaning, formatting & standardization",
+        "Small-to-medium Excel fixes and formula corrections",
+        "Data migration and restructuring",
+        "Custom Excel templates",
+        "Automated formulas and calculations",
+        "1 Master Sales MIS Dashboard",
+        "Region-wise, Product-wise, Salesperson-wise & Channel-wise views",
+        "Power Query setup for auto-refreshing Tally / ERP export data",
+        "Basic automation and workflow improvements",
+        "WhatsApp-ready PDF report / export",
+        "1-hour team training session",
+        "Recorded walkthrough of the delivered solution",
+        "1-page SOP / User Guide",
+        "30-day post-delivery support"
+      ],
+      "bestFor": "We already use Excel, but our current files are messy, manual, slow or difficult to manage.",
+      "highlighted": false
+    },
+    {
+      "name": "Professional",
+      "price": "Starting ₹20,000",
+      "tagline": "Turn your Excel data into a complete business reporting system.",
+      "ideal": "SMEs, sales teams, management teams and businesses that need multiple interconnected dashboards, automation, reporting and customized Excel workflows.",
+      "includes": [
+        "Everything in Standard",
+        "Multiple interconnected dashboards",
+        "Custom dashboard architecture based on business requirements",
+        "Executive / Management Dashboard",
+        "Sales & Revenue Dashboard",
+        "Product Performance Dashboard",
+        "Salesperson Performance Dashboard",
+        "Region / Branch / Territory Dashboard",
+        "Customer / Channel Analysis",
+        "Target vs Achievement Analysis",
+        "Growth & trend analysis",
+        "KPI tracking and management scorecards",
+        "Advanced Excel formulas and business logic",
+        "Power Query ETL & automated data transformation",
+        "Automated consolidation of multiple Excel / CSV / Tally / ERP exports",
+        "Dynamic PivotTables & PivotCharts",
+        "Interactive filters, slicers and drill-down views",
+        "Automated MIS reporting",
+        "PDF report generation / distribution-ready reports",
+        "Data validation and error-control mechanisms",
+        "Custom Excel templates and workflows",
+        "Conditional formatting & management alerts",
+        "Documentation / SOP",
+        "Team training",
+        "Recorded walkthrough",
+        "45-day post-delivery support"
+      ],
+      "bestFor": "We have multiple reports and data sources, but management wants one reliable Excel-based system to understand the business.",
+      "highlighted": true
+    },
+    {
+      "name": "Excel AMC Retainer",
+      "price": "Starting ₹15,000 / month",
+      "tagline": "Your Excel Expert. On Call. Every Month.",
+      "ideal": "Businesses that depend heavily on Excel and want ongoing access to an Excel specialist without hiring a full-time employee.",
+      "includes": [
+        "15–25 hours of scoped work per month",
+          "Dedicated WhatsApp / email channel — 24-hour response SLA",
+          "New report and dashboard requests",
+          "Ribbon add-in expansions",
+          "Monthly review call (30 minutes)",
+          "Priority scheduling — Altorz clients first"
+      ],
+      "positioning": "Don't waste hours trying to figure out Excel problems yourself. Your business gets access to an Excel specialist whenever Excel gets in the way.",
+      "highlighted": false
+    }
+  ]
+},
   "faqs": [
     {
       "q": "How do you usually price projects?",
       "a": "Fixed price by scope, not hourly. After a 30-min discovery call I send a written proposal with deliverables, timeline, and price. You approve before any work starts."
     },
     {
+      "q": "What industries does Altorz serve?",
+      "a": "Altorz serves SMEs and growing businesses across a wide range of industries, including manufacturing, distribution & wholesale, retail, logistics & transportation, real estate, professional services, healthcare, FMCG, construction, and B2B businesses. Our Excel, MIS, dashboard, automation, and data solutions are customized to each business's workflows, reporting requirements, and operational needs."
+    },
+    {
+      "q": "What's the Altorz Ribbon™?",
+      "a": "It's the delivery methodology — every Altorz system ships as a branded Excel add-in installed on your team's laptops. Your team gets one-click access to every automation under a dedicated tab named after your business. It's the difference between a 'macro file' that dies in three months and a system that lives in your operations."
+    },
+    {
       "q": "What's your typical turnaround time?",
-      "a": "Templates and data cleaning: 2–5 days. Dashboards: 5–10 days. Full systems and financial models: 7–14 days. Rush delivery available at +25%."
+      "a": "Templates and Data cleaning: 2-5 days. Dashboards: 2-3 weeks. Full systems and financial models: 3-4 weeks. AMC Retainer: work begins within 48 hours of signup. Rush delivery available at +25%."
     },
     {
       "q": "Will you sign an NDA?",
-      "a": "Yes, always — for any client who requests it. Your data, business logic, and methodologies stay confidential. I work alone, so there are no sub-contractors involved."
+      "a": "Yes, always — for any client who requests it. Your data, business logic, and methodologies stay confidential. I work alone, so there are no sub-contractors involved in any Altorz project."
     },
     {
       "q": "What happens if I need changes after delivery?",
-      "a": "Every project includes 14–60 days of free post-delivery support (depending on tier) — bug fixes, small tweaks, and questions. After that, an optional retainer covers ongoing changes."
+      "a": "Every project includes 30-45 days of free post-delivery support (depending on tier) — bug fixes, small tweaks, and questions. After that, an optional retainer covers ongoing changes."
     },
     {
       "q": "Can my team actually maintain what you build?",
@@ -175,7 +228,7 @@
     },
     {
       "q": "What if my data is really messy?",
-      "a": "That's literally what I do. Power Query was built for exactly this. Send a sample and I'll tell you on the discovery call what's salvageable and what we need to redesign."
+      "a": "That's literally what Altorz does. Tally exports, disconnected branch spreadsheets, inconsistent formats — Power Query was built for exactly this. Send a sample and I'll tell you on the discovery call what's salvageable and what needs to be restructured."
     },
     {
       "q": "Can you upgrade an existing spreadsheet instead of starting fresh?",
