@@ -81,7 +81,7 @@
       "description": "Most dashboards ship in 5-10 days. Full systems in 10-14. I don't pad timelines — I just don't quote what I can't deliver."
     },
     {
-      "icon": "gear",
+      "icon": "download",
       "title": "Delivered as installed software, not a file",
       "description": "Every system ships through the Altorz Riboon™ — a branded add-in installed on your team's Excel. One-click access to every automation. Not a scattered set of macro files."
     },
@@ -221,10 +221,6 @@
     {
       "q": "Can my team actually maintain what you build?",
       "a": "Yes — that's the standard I build to. Every project includes documentation, a recorded video walkthrough, and a handover call. If your team can't run it without me, I haven't done my job."
-    },
-    {
-      "q": "Do you work with international clients?",
-      "a": "Most of my work is with clients in the US, UK, UAE, and Singapore. I work in your timezone for calls, deliver in your currency, and have invoicing set up for international payments."
     },
     {
       "q": "What if my data is really messy?",
