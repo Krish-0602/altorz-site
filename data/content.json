@@ -81,9 +81,9 @@
       "description": "Most dashboards ship in 5-10 days. Full systems in 10-14. I don't pad timelines — I just don't quote what I can't deliver."
     },
     {
-      "icon": "download",
-      "title": "Delivered as installed software, not a file",
-      "description": "Every system ships through the Altorz Riboon™ — a branded add-in installed on your team's Excel. One-click access to every automation. Not a scattered set of macro files."
+      "icon": "gear",
+      "title": "Delivered as installed software, not files",
+      "description": "Every system ships through the Altorz Ribbon™ — a branded add-in installed on your team's Excel. One-click access to every automation. Not a scattered set of macro files."
     },
     {
       "icon": "lock",
