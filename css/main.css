@@ -460,7 +460,7 @@ input, textarea, select { font-family: inherit; color: inherit; }
   font-size: 10px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-dim);
+  color: var(--text);
   text-align: right;
 }
 .hero-portrait-deco {
