@@ -452,7 +452,7 @@ input, textarea, select { font-family: inherit; color: inherit; }
   font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--text-dim);
+  color: var(--text);
   margin-top: 4px;
 }
 .hero-portrait-loc {
