@@ -1,22 +1,24 @@
 {
+  "sectionHeadline": "Onboarding First 3 Pilot Clients",
+  "sectionSubhead": "Altorz is currently accepting three founding clients. Testimonials, case studies, and referrals will appear here as those Pilot deployments complete.",
   "testimonials": [
     {
-      "id": "placeholder-1",
-      "active": false,
+      "id": "pilot-invitation",
+      "active": true,
       "rating": 5,
-      "quote": "Add your first client testimonial here. To activate, set \"active\": true. To add more, just append to this array.",
-      "name": "Client Name",
-      "title": "CFO",
-      "company": "Company Name",
-      "companyType": "Industry",
+      "quote": "The first three Altorz clients get entry-tier pricing in exchange for a written testimonial, permission to publish a case study, and one warm referral introduction to another business. After the third Pilot client signs, this tier retires permanently.",
+      "name": "The Altorz Pilot Program",
+      "title": "3 slots · Open now · Closes at client #3",
+      "company": "Founding Client Access",
+      "companyType": "Business · Operations · Data Automation",
       "avatar": "",
-      "projectRef": "executive-financial-kpi"
+      "projectRef": "datacleanerpro-ribbon-tool"
     }
   ],
   "stats": {
-    "averageRating": "5.0",
-    "totalReviews": "—",
+    "averageRating": "First 3",
+    "totalReviews": "Pilot slots",
     "responseTime": "< 4 hours",
-    "deliveredOnTime": "100%"
+    "deliveredOnTime": "45-day support"
   }
 }
