@@ -12,6 +12,7 @@
         "Auto-refresh data model",
         "Print/export-ready layouts"
       ],
+      "startingFrom": "Discovery call",
       "timeline": "5–10 days"
     },
     {
@@ -26,7 +27,8 @@
         "Sensitivity & valuation outputs",
         "Assumption documentation"
       ],
-        "timeline": "7–14 days"
+      "startingFrom": "Discovery call",
+      "timeline": "7–14 days"
     },
     {
       "id": "power-query-etl",
@@ -40,6 +42,7 @@
         "Master consolidated model",
         "Refresh log + data dictionary"
       ],
+      "startingFrom": "Discovery call",
       "timeline": "5–10 days"
     },
     {
@@ -54,8 +57,10 @@
         "Email/PDF automation",
         "Error handling + documentation"
       ],
+      "startingFrom": "Discovery call",
       "timeline": "4–8 days"
-    },{
+    },
+    {
       "id": "custom-ribbon-tools",
       "icon": "ribbon",
       "title": "Custom Excel Automation Tools",
@@ -67,6 +72,7 @@
         "Data quality reporting engine",
         "Documentation + training walkthrough"
       ],
+      "startingFrom": "Discovery call",
       "timeline": "7–21 days"
     },
     {
@@ -81,6 +87,7 @@
         "Department/period rollups",
         "Variance & trend analysis"
       ],
+      "startingFrom": "Discovery call",
       "timeline": "7–12 days"
     },
     {
@@ -95,6 +102,7 @@
         "Validation rule set",
         "Before/after audit log"
       ],
+      "startingFrom": "Discovery call",
       "timeline": "2–5 days"
     },
     {
@@ -109,6 +117,7 @@
         "Revenue forecasting",
         "Rep performance analytics"
       ],
+      "startingFrom": "Discovery call",
       "timeline": "7–14 days"
     },
     {
@@ -123,6 +132,7 @@
         "Supplier OTD analytics",
         "Demand forecasting"
       ],
+      "startingFrom": "Discovery call",
       "timeline": "7–12 days"
     },
     {
@@ -137,6 +147,7 @@
         "Attrition risk analytics",
         "Performance scorecards"
       ],
+      "startingFrom": "Discovery call",
       "timeline": "6–10 days"
     }
   ]
