@@ -1,5 +1,6 @@
 /* =========================================================
-   KRISH BORADE — PORTFOLIO
+   ALTORZ — KRISH BORADE, FOUNDER
+   Automated Excel systems for manufacturers.
    Main app: data loading, rendering, interactions
    ========================================================= */
 
@@ -11,7 +12,6 @@ const Icons = {
   plus: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>`,
   menu: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>`,
   external: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14L21 3"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>`,
-  // Service icons
   chart: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>`,
   trending: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>`,
   flow: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="6" height="6" rx="1"/><rect x="15" y="3" width="6" height="6" rx="1"/><rect x="9" y="15" width="6" height="6" rx="1"/><path d="M6 9v3a3 3 0 0 0 3 3h3"/><path d="M18 9v3a3 3 0 0 1-3 3h-3"/></svg>`,
@@ -22,7 +22,6 @@ const Icons = {
   box: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>`,
   people: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>`,
   ribbon: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="9" x2="22" y2="9"/><line x1="7" y1="13" x2="7" y2="16"/><line x1="11" y1="13" x2="11" y2="16"/><line x1="15" y1="13" x2="15" y2="16"/><line x1="19" y1="13" x2="19" y2="16"/></svg>`,
-  // Why-me icons
   shield: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>`,
   clock: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>`,
   gear: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>`,
@@ -30,7 +29,6 @@ const Icons = {
   refresh: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>`,
   chat: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>`,
   trophy: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="18" y2="3"/><path d="M8 3v6a4 4 0 0 0 8 0V3"/><path d="M6 3H4v3a3 3 0 0 0 3 3"/><path d="M18 3h2v3a3 3 0 0 1-3 3"/><line x1="12" y1="13" x2="12" y2="18"/><path d="M9 21h6"/></svg>`,
-  // Contact icons
   mail: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>`,
   phone: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>`,
   whatsapp: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1"/></svg>`,
@@ -62,12 +60,12 @@ function renderNav() {
         <span>${name.split(' ')[0]} <em>${name.split(' ')[1] || ''}</em></span>
       </a>
       <div class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#services">Services</a>
+        <a href="#work">Reference Builds</a>
+        <a href="#services">Capabilities</a>
         <a href="#process">Process</a>
-        <a href="#pricing">Pricing</a>
+        <a href="#pricing">Offers</a>
         <a href="#faq">FAQ</a>
-        <a href="#contact" class="nav-cta">Start a project ${Icons.arrow}</a>
+        <a href="#contact" class="nav-cta">Book a discovery call ${Icons.arrow}</a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Menu">${Icons.menu}</button>
     </div>`;
@@ -87,14 +85,15 @@ function renderHero() {
           ${p.availability.label}
         </div>
         <h1 class="hero-title">
-          I build Excel systems<br>
-          that <em>think for themselves.</em>
+          I rebuild the spreadsheets<br>
+          your <em>business</em><br>
+          actually runs on.
         </h1>
         <p class="hero-sub">
           ${p.bio.short}
         </p>
         <div class="hero-actions">
-          <a href="#work" class="btn btn-primary">See the work ${Icons.arrow}</a>
+          <a href="#work" class="btn btn-primary">See the reference builds ${Icons.arrow}</a>
           <a href="#contact" class="btn btn-secondary">Book a discovery call</a>
         </div>
         <div class="hero-metrics">
@@ -109,7 +108,7 @@ function renderHero() {
       <div class="hero-portrait reveal">
         <div class="hero-portrait-deco">
           <span class="dot"></span>
-          On the clock
+          Onboarding first 3 Pilot clients
         </div>
         <img src="${p.avatar}" alt="${p.name}">
         <div class="hero-portrait-overlay">
@@ -126,9 +125,10 @@ function renderHero() {
 // ============ RENDER: TRUST STRIP ============
 function renderTrustStrip() {
   const items = [
-    'Power Query', 'Power Pivot', 'VBA', 'DAX', 'Financial Modeling',
-    'KPI Dashboards', 'ETL Pipelines', 'MIS Reporting', 'Data Cleaning',
-    'Forecasting', 'Scenario Analysis', 'Cohort Analysis', 'CRM Systems'
+    'Power Query', 'Power Pivot', 'VBA', 'DAX', 'Ribbon Add-ins',
+    'MIS Reporting', 'Inventory Systems', 'Production Dashboards', 'Batch Tracking',
+    'Dealer Schemes', 'Sales MIS', 'CRM Systems', 'ETL Pipelines',
+    'Financial Modeling', 'Data Cleaning'
   ];
   const html = items.map(t => `<div class="trust-item"><span class="icon">✦</span>${t}</div>`).join('');
   document.getElementById('trustStrip').innerHTML = `
@@ -141,13 +141,13 @@ function renderAbout() {
   document.getElementById('about').innerHTML = `
     <div class="container">
       <div class="section-header reveal">
-        <span class="eyebrow"><span class="dot"></span>About</span>
-        <h2 class="section-title">Excel is my <em>medium.</em><br>Clarity is the <em>product.</em></h2>
+        <span class="eyebrow"><span class="dot"></span>About Altorz</span>
+        <h2 class="section-title">Excel is the <em>medium.</em><br>Clarity is the <em>product.</em></h2>
       </div>
       <div class="about-grid">
         <div class="reveal">
           <p class="about-lead">
-            I'm <em>Krish Borade</em> — an Excel specialist and automation consultant building executive-grade analytics infrastructure for finance, ops, and growth teams.
+            <em>Altorz</em> is a boutique Excel consulting practice, serving businesses across India. Founded and run by Krish Borade — a working operator inside a Mumbai manufacturing firm.
           </p>
           <div class="about-body">
             ${p.bio.long.map(t => `<p>${t}</p>`).join('')}
@@ -166,7 +166,7 @@ function renderAbout() {
     </div>`;
 }
 
-// ============ RENDER: SERVICES ============
+// ============ RENDER: SERVICES (CAPABILITIES) ============
 function renderServices() {
   const html = DATA.services.services.map(s => `
     <div class="service-card reveal">
@@ -183,9 +183,9 @@ function renderServices() {
   document.getElementById('services').innerHTML = `
     <div class="container">
       <div class="section-header reveal">
-        <span class="eyebrow"><span class="dot"></span>Services</span>
-        <h2 class="section-title">Everything Excel can do, <em>done right.</em></h2>
-        <p class="section-subtitle">Nine services. One standard: production-ready, documented, and engineered to outlive the person who made it.</p>
+        <span class="eyebrow"><span class="dot"></span>Capabilities</span>
+        <h2 class="section-title">Ten capabilities, <em>one methodology.</em></h2>
+        <p class="section-subtitle">Every Altorz engagement is built from the capabilities below — packaged into three productized offers (see below), or scoped as a bespoke project. All ship through the Altorz Ribbon™.</p>
       </div>
       <div class="services-grid">${html}</div>
     </div>`;
@@ -201,18 +201,16 @@ function renderPortfolio() {
   document.getElementById('work').innerHTML = `
     <div class="container">
       <div class="section-header reveal">
-        <span class="eyebrow"><span class="dot"></span>Selected Work</span>
-        <h2 class="section-title">Systems shipped. <em>Numbers improved.</em></h2>
-        <p class="section-subtitle">Every project below replaced manual work, fragile spreadsheets, or missing visibility with infrastructure that actually scales.</p>
+        <span class="eyebrow"><span class="dot"></span>Reference Build Library</span>
+        <h2 class="section-title">17 systems. <em>One methodology.</em></h2>
+        <p class="section-subtitle">Every reference build below is a fully functional Excel system demonstrating the Altorz methodology across MIS, inventory, financial modeling, CRM, HR, and operations analytics. Live demos available on discovery calls.</p>
       </div>
       <div class="portfolio-filters reveal">${filterHtml}</div>
       <div class="portfolio-grid" id="portfolioGrid"></div>
     </div>`;
 
-  // Initial render
   renderProjectGrid('all');
 
-  // Filter clicks
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -247,7 +245,6 @@ function renderProjectGrid(filter) {
     card.addEventListener('click', () => openModal(card.dataset.project));
   });
 
-  // Re-apply reveal observers to new cards
   grid.querySelectorAll('.project-card').forEach(c => c.classList.add('reveal', 'in'));
 }
 
@@ -266,16 +263,16 @@ function renderFeatured() {
         <ul class="featured-features">
           ${p.features.slice(0, 4).map(f => `<li>${f}</li>`).join('')}
         </ul>
-        <a href="#" class="featured-link" data-project="${p.id}">Read the case study ${Icons.arrow}</a>
+        <a href="#" class="featured-link" data-project="${p.id}">Read the full reference build ${Icons.arrow}</a>
       </div>
     </div>
   `).join('');
   document.getElementById('featured').innerHTML = `
     <div class="container">
       <div class="section-header reveal">
-        <span class="eyebrow"><span class="dot"></span>Case Studies</span>
-        <h2 class="section-title">Three projects, in <em>detail.</em></h2>
-        <p class="section-subtitle">Real problems. Real solutions. Real outcomes — the kind of work I'd want you to hire me for.</p>
+        <span class="eyebrow"><span class="dot"></span>Featured Reference Builds</span>
+        <h2 class="section-title">Four builds, in <em>detail.</em></h2>
+        <p class="section-subtitle">DataCleanerPro is Reference Build #1 of the Altorz Ribbon™ methodology. The other three illustrate how the methodology applies across MIS, ETL, and CRM systems for manufacturing operations.</p>
       </div>
       <div class="featured-list">${html}</div>
     </div>`;
@@ -295,8 +292,8 @@ function renderEtlDemo() {
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow"><span class="dot"></span>Live Demo</span>
-        <h2 class="section-title">Watch a Power Query <em>ETL pipeline</em><br>do five hours of work in five seconds.</h2>
-        <p class="section-subtitle">Three messy data sources → 12-step transformation → one clean executive dashboard. Scroll through the live interactive demo below.</p>
+        <h2 class="section-title">Watch a Power Query <em>ETL pipeline</em><br>do three hours of work in twelve seconds.</h2>
+        <p class="section-subtitle">Three messy data sources — Tally exports, ERP dumps, branch spreadsheets — merged through a 12-step transformation pipeline into one clean executive MIS. Scroll through the live interactive demo below.</p>
       </div>
       <div class="etl-frame-wrap reveal">
         <div class="etl-frame-toolbar">
@@ -325,7 +322,7 @@ function renderSkills() {
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow"><span class="dot"></span>The Toolkit</span>
-        <h2 class="section-title">A full <em>stack</em> for Excel-native problem-solving.</h2>
+        <h2 class="section-title">A full <em>stack</em> for business-native Excel automation.</h2>
       </div>
       <div class="skills-grid">${html}</div>
     </div>`;
@@ -365,8 +362,8 @@ function renderWhyMe() {
   document.getElementById('whyMe').innerHTML = `
     <div class="container">
       <div class="section-header reveal">
-        <span class="eyebrow"><span class="dot"></span>Why work with me</span>
-        <h2 class="section-title">Six reasons clients <em>come back.</em></h2>
+        <span class="eyebrow"><span class="dot"></span>Why Altorz</span>
+        <h2 class="section-title">Eight reasons manufacturers <em>choose Altorz.</em></h2>
       </div>
       <div class="why-grid">${html}</div>
     </div>`;
@@ -394,16 +391,16 @@ function renderTestimonials() {
   ` : `
     <div class="testimonials-empty reveal">
       <div class="icon-wrap">${Icons.quote}</div>
-      <h3>Your testimonial belongs here.</h3>
-      <p>Building this part of the page in real time. Be one of the first clients to see your words featured — open a project and let's get to work.</p>
-      <a href="#contact" class="btn btn-primary">Start a project ${Icons.arrow}</a>
+      <h3>The Altorz Pilot Program is open.</h3>
+      <p>The first three clients get entry-tier pricing in exchange for a testimonial, case study permission, and one warm referral introduction to another business. After the third Pilot client signs, this tier retires permanently.</p>
+      <a href="#contact" class="btn btn-primary">Apply to the Pilot Program ${Icons.arrow}</a>
     </div>
   `;
   document.getElementById('testimonials').innerHTML = `
     <div class="container">
       <div class="section-header reveal">
-        <span class="eyebrow"><span class="dot"></span>Testimonials</span>
-        <h2 class="section-title">What clients <em>say.</em></h2>
+        <span class="eyebrow"><span class="dot"></span>Client Access</span>
+        <h2 class="section-title">Onboarding first <em>3 Pilot clients.</em></h2>
       </div>
       ${grid}
     </div>`;
@@ -424,15 +421,15 @@ function renderPricing() {
       <ul class="pricing-list">
         ${t.includes.map(i => `<li>${i}</li>`).join('')}
       </ul>
-      <a href="#contact" class="btn btn-secondary" style="width:100%;justify-content:center;">Get a quote ${Icons.arrow}</a>
+      <a href="#contact" class="btn btn-secondary" style="width:100%;justify-content:center;">Book a discovery call ${Icons.arrow}</a>
     </div>
   `).join('');
   document.getElementById('pricing').innerHTML = `
     <div class="container">
       <div class="section-header reveal">
-        <span class="eyebrow"><span class="dot"></span>Investment</span>
-        <h2 class="section-title">Honest pricing.<br>Fixed by scope, <em>not by hour.</em></h2>
-        <p class="section-subtitle">Every project gets a written proposal before work starts. No retainers required, no padded estimates.</p>
+        <span class="eyebrow"><span class="dot"></span>Three Productized Offers</span>
+        <h2 class="section-title">Three ways to work with Altorz.<br>Fixed by scope, <em>not by hour.</em></h2>
+        <p class="section-subtitle">Every engagement gets a written proposal after a discovery call. Pilot Program pricing is available for the first three clients only — quoted privately on request.</p>
       </div>
       <div class="pricing-grid">${html}</div>
       <p class="pricing-note reveal">${DATA.content.pricing.note}</p>
@@ -469,16 +466,16 @@ function renderContact() {
   const channels = [
     { icon: 'mail', label: 'Email', value: p.contact.email, href: `mailto:${p.contact.email}` },
     { icon: 'whatsapp', label: 'WhatsApp', value: 'Send a message', href: p.contact.whatsapp },
-    { icon: 'phone', label: 'Call now for free consultation', value: p.contact.phone, href: `tel:${p.contact.phone.replace(/[^+0-9]/g, '')}` },
-    { icon: 'clock', label: 'Book a free call', value: '30-min discovery call', href: p.contact.calendly }
+    { icon: 'phone', label: 'Call for free consultation', value: p.contact.phone, href: `tel:${p.contact.phone.replace(/[^+0-9]/g, '')}` },
+    { icon: 'clock', label: 'Book a discovery call', value: '30-min free consultation', href: p.contact.calendly }
   ];
   document.getElementById('contact').innerHTML = `
     <div class="container">
       <div class="contact-grid">
         <div class="contact-cta reveal">
-          <div class="eyebrow" style="margin-bottom:20px;"><span class="dot"></span>Let's build something</div>
-          <h2 class="contact-cta-title">Got a messy spreadsheet?<br><em>Let's fix it.</em></h2>
-          <p class="contact-cta-sub">Send me a short brief — even a screenshot. I'll reply within 4 hours during business days with a clear next step.</p>
+          <div class="eyebrow" style="margin-bottom:20px;"><span class="dot"></span>Let's build the alternative</div>
+          <h2 class="contact-cta-title">Monthly MIS still takes 3 days?<br><em>Let's fix that.</em></h2>
+          <p class="contact-cta-sub">Send me a short brief — even a screenshot of your current reporting workflow. I'll reply within 4 hours during business days with a clear next step. If Altorz isn't the fit, I'll say so.</p>
           <div class="contact-channels">
             ${channels.map(c => {
               const isLocal = c.href.startsWith('tel:') || c.href.startsWith('mailto:');
@@ -493,10 +490,11 @@ function renderContact() {
               </a>
             `;}).join('')}
           </div>
-          <p class="contact-free-note">${Icons.shield}<span>You're only charged for projects — never for consultation. <strong>Connecting with me is absolutely free.</strong></span></p>
+          <p class="contact-free-note">${Icons.shield}<span>Discovery calls are free — always. <strong>You're only charged for projects.</strong></span></p>
         </div>
 
-        <form class="contact-form reveal" id="contactForm">
+        <form class="contact-form reveal" id="contactForm" name="project-inquiry" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="project-inquiry">
           <div class="form-row split">
             <div>
               <label class="form-label">Your name</label>
@@ -516,11 +514,12 @@ function renderContact() {
               <label class="form-label">Budget range</label>
               <select class="form-select" name="budget">
                 <option value="">Choose one</option>
-                <option>Under $250</option>
-                <option>$250 – $500</option>
-                <option>$500 – $1,000</option>
-                <option>$1,000 – $2,500</option>
-                <option>$2,500+</option>
+                <option>Under ₹10,000</option>
+                <option>₹10,000 – ₹20,000</option>
+                <option>₹20,000 – ₹50,000</option>
+                <option>₹50,000 – ₹75,000</option>
+                <option>₹75,000+</option>
+                <option>AMC / Retainer</option>
                 <option>Not sure yet</option>
               </select>
             </div>
@@ -528,17 +527,28 @@ function renderContact() {
           <div class="form-row">
             <label class="form-label">What are you looking to build?</label>
             <select class="form-select" name="service">
-              <option value="">Choose a service</option>
-              ${DATA.services.services.map(s => `<option>${s.title}</option>`).join('')}
-              <option>Something else / not sure</option>
+              <option value="">Choose an offer</option>
+              <option>Executive Dashboards</option>
+              <option>Financial Modeling</option>
+              <option>Customised Excel Automation Tools</option>
+              <option>Power Query ETL</option>
+              <option>VBA Automation</option>
+              <option>MIS Reporting Systems</option>
+              <option>Data Cleaning & Migration</option>
+              <option>CRM & Sales Systems</option>
+              <option>Inventory & Supply Chain</option>
+              <option>HR & Workforce Analytics</option>
+              <option>Excel AMC Retainer</option>
+              <option>Bespoke project</option>
+              <option>Something else/ Not sure — book a discovery call</option>
             </select>
           </div>
           <div class="form-row">
-            <label class="form-label">Tell me about the project</label>
-            <textarea class="form-textarea" name="message" placeholder="What problem are you trying to solve? What does your current process look like? Any screenshots welcome."></textarea>
+            <label class="form-label">Tell me about your operation</label>
+            <textarea class="form-textarea" name="message" placeholder="What does your current reporting workflow look like? Where does it break? Screenshots or file samples welcome."></textarea>
           </div>
           <button type="submit" class="form-submit">Send project brief ${Icons.send}</button>
-          <p class="form-note">Replies within 4 hours during business days · Mon–Sat, 10am–8pm IST</p>
+          <p class="form-note">Replies within 4 hours during business days · Mon–Sat, 6:30pm–11pm IST · Sun, 10am–8pm IST</p>
           <div class="form-success" id="formSuccess">
             <h4>Got it. Talk soon.</h4>
             <p>Your message is in. I'll reply within 4 business hours.</p>
@@ -547,19 +557,15 @@ function renderContact() {
       </div>
     </div>`;
 
-  // Form handler
   document.getElementById('contactForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    const params = new URLSearchParams();
-    for (const [k, v] of formData.entries()) params.append(k, v);
-    // Build a mailto fallback
-    const subject = encodeURIComponent(`New project inquiry from ${formData.get('name') || 'a client'}`);
+    const subject = encodeURIComponent(`New Altorz inquiry from ${formData.get('name') || 'a prospect'}`);
     const body = encodeURIComponent(
       `Name: ${formData.get('name')}\n` +
       `Email: ${formData.get('email')}\n` +
       `Company: ${formData.get('company') || '—'}\n` +
-      `Service: ${formData.get('service') || '—'}\n` +
+      `Offer: ${formData.get('service') || '—'}\n` +
       `Budget: ${formData.get('budget') || '—'}\n\n` +
       `Message:\n${formData.get('message') || '—'}`
     );
@@ -577,7 +583,7 @@ function renderFooter() {
       <div class="footer-top">
         <div>
           <div class="footer-brand-title">${p.name}</div>
-          <p class="footer-brand-desc">${p.title} building executive-grade Excel systems for finance, ops, and growth teams worldwide.</p>
+          <p class="footer-brand-desc">${p.title}. Building Automated Excel Systems for Businesses across India — delivered through the Altorz Ribbon™.</p>
           <div style="display:flex;gap:12px;">
             <a href="tel:${p.contact.phone.replace(/[^+0-9]/g, '')}" class="contact-channel-icon" style="width:36px;height:36px;">${Icons.phone}</a>
             <a href="${p.contact.whatsapp}" target="_blank" rel="noopener" class="contact-channel-icon" style="width:36px;height:36px;">${Icons.whatsapp}</a>
@@ -587,15 +593,15 @@ function renderFooter() {
         <div class="footer-col">
           <h5>Navigate</h5>
           <ul>
-            <li><a href="#work">Selected Work</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#work">Reference Builds</a></li>
+            <li><a href="#services">Capabilities</a></li>
             <li><a href="#process">Process</a></li>
-            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#pricing">Offers</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h5>Services</h5>
+          <h5>Capabilities</h5>
           <ul>
             ${DATA.services.services.slice(0, 6).map(s => `<li><a href="#services">${s.title}</a></li>`).join('')}
           </ul>
@@ -604,15 +610,15 @@ function renderFooter() {
           <h5>Get in touch</h5>
           <ul>
             <li><a href="mailto:${p.contact.email}">${p.contact.email}</a></li>
-            <li><a href="tel:${p.contact.phone.replace(/[^+0-9]/g, '')}">Call now — free consultation</a></li>
+            <li><a href="tel:${p.contact.phone.replace(/[^+0-9]/g, '')}">Call for free consultation</a></li>
             <li><a href="${p.contact.whatsapp}" target="_blank" rel="noopener">WhatsApp</a></li>
-            <li><a href="${p.contact.calendly}" target="_blank" rel="noopener">Book a free call</a></li>
+            <li><a href="${p.contact.calendly}" target="_blank" rel="noopener">Book a discovery call</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <div>© ${new Date().getFullYear()} ${p.name}. All work crafted in ${p.location.split('·')[0].trim()}.</div>
-        <div>Built with <em style="font-family:var(--font-display);color:var(--accent);">obsession</em></div>
+        <div>© ${new Date().getFullYear()} Altorz · ${p.name}. Crafted in ${p.location.split('·')[0].trim()}.</div>
+        <div>Built with <em style="font-family:var(--font-display);color:var(--accent);">discipline</em></div>
       </div>
     </div>`;
 }
@@ -672,7 +678,7 @@ function openModal(projectId) {
       ${project.customBuildNote ? `<div class="modal-custom-note">${Icons.ribbon}<p>${project.customBuildNote}</p></div>` : ''}
 
       <div class="modal-cta">
-        <a href="#contact" class="btn btn-primary" id="modalContact">Build something similar ${Icons.arrow}</a>
+        <a href="#contact" class="btn btn-primary" id="modalContact">Discuss a similar build ${Icons.arrow}</a>
         ${project.demoUrl ? `<a href="${project.demoUrl}" target="_blank" class="btn btn-secondary">View live demo ${Icons.external}</a>` : ''}
       </div>
     </div>`;
@@ -724,7 +730,7 @@ function initModalEsc() {
 // ============ BOOT ============
 async function boot() {
   await loadData();
-  document.title = `${DATA.profile.name} — ${DATA.profile.title}`;
+  // Title tag is set in index.html — do not override here
 
   renderNav();
   renderHero();
