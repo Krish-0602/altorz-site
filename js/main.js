@@ -363,7 +363,7 @@ function renderWhyMe() {
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow"><span class="dot"></span>Why Altorz</span>
-        <h2 class="section-title">Eight reasons manufacturers <em>choose Altorz.</em></h2>
+        <h2 class="section-title">Eight reasons businesses <em>choose Altorz.</em></h2>
       </div>
       <div class="why-grid">${html}</div>
     </div>`;
