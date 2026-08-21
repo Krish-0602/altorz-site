@@ -136,5 +136,15 @@
   <!-- ============ APP ============ -->
   <script src="js/main.js"></script>
 
+<!-- Hidden form for Netlify Forms detection at build time.
+     The visible form is rendered dynamically by js/main.js and submits to this. -->
+<form name="project-inquiry" netlify netlify-honeypot="bot-field" hidden>
+  <input type="text" name="name" />
+  <input type="email" name="email" />
+  <input type="text" name="company" />
+  <input type="text" name="budget" />
+  <input type="text" name="service" />
+  <textarea name="message"></textarea>
+</form>
 </body>
 </html>
