@@ -77,12 +77,15 @@ function renderNav() {
 // ============ RENDER: HERO ============
 function renderHero() {
   const p = DATA.profile;
+  const now = new Date();
+  const currentPeriod = `${now.toLocaleDateString('en-US', { month: 'long' })} ${now.getFullYear()}`;
+  const availabilityLabel = `${p.availability.labelPrefix} · ${currentPeriod}`;
   document.getElementById('hero').innerHTML = `
     <div class="container hero-inner">
       <div class="hero-content reveal">
         <div class="hero-status">
           <span class="pulse"></span>
-          ${p.availability.label}
+          ${availabilityLabel}
         </div>
         <h1 class="hero-title">
           I rebuild the spreadsheets<br>
@@ -108,7 +111,7 @@ function renderHero() {
       <div class="hero-portrait reveal">
         <div class="hero-portrait-deco">
           <span class="dot"></span>
-          Onboarding first 3 Pilot clients
+          ${availabilityLabel}
         </div>
         <img src="${p.avatar}" alt="${p.name}">
         <div class="hero-portrait-overlay">
@@ -379,7 +382,7 @@ function renderTestimonials() {
           <div class="testimonial-rating">${'★'.repeat(t.rating)}</div>
           <p class="testimonial-quote">"${t.quote}"</p>
           <div class="testimonial-author">
-            <div class="testimonial-avatar">${t.name.split(' ').map(n=>n[0]).slice(0,2).join('')}</div>
+            <div class="testimonial-avatar">${t.customAvatar || t.name.split(' ').map(n=>n[0]).slice(0,2).join('')}</div>
             <div class="testimonial-meta">
               <div class="name">${t.name}</div>
               <div class="title">${t.title} · ${t.company}</div>
@@ -548,6 +551,7 @@ function renderContact() {
             <textarea class="form-textarea" name="message" placeholder="What does your current reporting workflow look like? Where does it break? Screenshots or file samples welcome."></textarea>
           </div>
           <button type="submit" class="form-submit">Send project brief ${Icons.send}</button>
+          <button type="button" id="copyEmailBtn" style="background:none;border:none;color:#A0A2A8;font-size:13px;padding:12px 0;cursor:pointer;text-decoration:underline;font-family:inherit;display:block;margin:8px auto 0;">Prefer email? Copy krish@altorz.com</button>
           <p class="form-note">Replies within 4 hours during business days · Mon–Sat, 6:30pm–11pm IST · Sun, 10am–8pm IST</p>
           <div class="form-success" id="formSuccess">
             <h4>Got it. Talk soon.</h4>
@@ -557,22 +561,42 @@ function renderContact() {
       </div>
     </div>`;
 
-  document.getElementById('contactForm').addEventListener('submit', (e) => {
+    document.getElementById('contactForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
-    const subject = encodeURIComponent(`New Altorz inquiry from ${formData.get('name') || 'a prospect'}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.get('name')}\n` +
-      `Email: ${formData.get('email')}\n` +
-      `Company: ${formData.get('company') || '—'}\n` +
-      `Offer: ${formData.get('service') || '—'}\n` +
-      `Budget: ${formData.get('budget') || '—'}\n\n` +
-      `Message:\n${formData.get('message') || '—'}`
-    );
-    window.location.href = `mailto:${DATA.profile.contact.email}?subject=${subject}&body=${body}`;
-    document.getElementById('formSuccess').classList.add('show');
-    setTimeout(() => e.target.reset(), 500);
+    const params = new URLSearchParams();
+    for (const [k, v] of formData.entries()) params.append(k, v);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: params.toString()
+    })
+    .then(() => {
+      document.getElementById('formSuccess').classList.add('show');
+      setTimeout(() => e.target.reset(), 500);
+    })
+    .catch(err => {
+      console.error('Form submission failed:', err);
+      alert('Something went wrong sending your message. Please try WhatsApp instead, or copy the email address below.');
+    });
   });
+
+  // Copy email button handler
+  const copyBtn = document.getElementById('copyEmailBtn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText('krish@altorz.com');
+        const originalText = copyBtn.textContent;
+        copyBtn.textContent = '✓ Email copied to clipboard';
+        setTimeout(() => { copyBtn.textContent = originalText; }, 2000);
+      } catch (err) {
+        console.error('Failed to copy:', err);
+        alert('Copy failed. Email: krish@altorz.com');
+      }
+    });
+  }
 }
 
 // ============ RENDER: FOOTER ============

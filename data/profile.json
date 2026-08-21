@@ -47,6 +47,6 @@
   },
   "availability": {
     "status": "available",
-    "label": "Onboarding first 3 Pilot clients · August 2026"
+    "labelPrefix": "Onboarding first 3 Pilot clients"
   }
 }

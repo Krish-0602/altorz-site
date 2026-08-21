@@ -1397,7 +1397,7 @@ input, textarea, select { font-family: inherit; color: inherit; }
   box-shadow: 0 0 40px rgba(201, 255, 91, 0.08);
 }
 .pricing-card.highlighted::before {
-  content: 'Most chosen';
+  content: 'Most Recommended';
   position: absolute;
   top: -1px; right: 28px;
   background: var(--accent);
