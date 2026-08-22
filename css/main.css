@@ -505,7 +505,7 @@ input, textarea, select { font-family: inherit; color: inherit; }
 .trust-marquee {
   display: flex;
   gap: 64px;
-  animation: marquee 35s linear infinite;
+  animation: marquee 18s linear infinite;
   align-items: center;
   white-space: nowrap;
 }
