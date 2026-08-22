@@ -56,8 +56,11 @@ function renderNav() {
   nav.innerHTML = `
     <div class="nav-inner">
       <a href="#home" class="nav-brand">
-        <div class="brand-mark">${DATA.profile.initials}</div>
-        <span>${name.split(' ')[0]} <em>${name.split(' ')[1] || ''}</em></span>
+        <div class="brand-mark" style="font-family:Georgia,serif;font-weight:700;font-size:16px;">A</div>
+        <span style="display:flex;flex-direction:column;line-height:1.1;">
+          <strong style="font-family:Georgia,serif;font-weight:700;font-size:18px;letter-spacing:3px;">ALTORZ</strong>
+          <em style="font-family:'Inter Tight',Aptos,sans-serif;font-weight:400;font-size:10px;color:var(--text-muted,#A0A2A8);font-style:italic;letter-spacing:1px;text-transform:uppercase;margin-top:2px;">Alternative Operations</em>
+        </span>
       </a>
       <div class="nav-links">
         <a href="#work">Reference Builds</a>
@@ -612,6 +615,7 @@ function renderFooter() {
             <a href="tel:${p.contact.phone.replace(/[^+0-9]/g, '')}" class="contact-channel-icon" style="width:36px;height:36px;">${Icons.phone}</a>
             <a href="${p.contact.whatsapp}" target="_blank" rel="noopener" class="contact-channel-icon" style="width:36px;height:36px;">${Icons.whatsapp}</a>
             <a href="mailto:${p.contact.email}" class="contact-channel-icon" style="width:36px;height:36px;">${Icons.mail}</a>
+            <a href="https://www.linkedin.com/in/krishborade" target="_blank" rel="noopener" class="contact-channel-icon" style="width:36px;height:36px;">${Icons.linkedin}</a>
           </div>
         </div>
         <div class="footer-col">
