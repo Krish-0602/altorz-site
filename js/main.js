@@ -3,7 +3,6 @@
    Automated Excel systems for manufacturers.
    Main app: data loading, rendering, interactions
    ========================================================= */
-
 // ============ ICON LIBRARY ============
 const Icons = {
   arrow: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>`,
@@ -37,10 +36,8 @@ const Icons = {
   play: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>`,
   quote: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2-1 0-1 .008-1 1.031V20c0 1 0 1 1 1z"/><path d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2h.75c0 2.25.25 4-2.75 4v3c0 1 0 1 1 1z"/></svg>`
 };
-
 // ============ DATA LOADER ============
 let DATA = { profile: null, services: null, projects: null, testimonials: null, content: null };
-
 async function loadData() {
   const files = ['profile', 'services', 'projects', 'testimonials', 'content'];
   const results = await Promise.all(
@@ -48,7 +45,6 @@ async function loadData() {
   );
   files.forEach((f, i) => { DATA[f] = results[i]; });
 }
-
 // ============ RENDER: NAV ============
 function renderNav() {
   const { name } = DATA.profile;
@@ -76,7 +72,6 @@ function renderNav() {
     nav.classList.toggle('menu-open');
   });
 }
-
 // ============ RENDER: HERO ============
 function renderHero() {
   const p = DATA.profile;
@@ -127,7 +122,6 @@ function renderHero() {
       </div>
     </div>`;
 }
-
 // ============ RENDER: TRUST STRIP ============
 function renderTrustStrip() {
   const items = [
@@ -140,7 +134,6 @@ function renderTrustStrip() {
   document.getElementById('trustStrip').innerHTML = `
     <div class="trust-marquee">${html}${html}</div>`;
 }
-
 // ============ RENDER: ABOUT ============
 function renderAbout() {
   const p = DATA.profile;
@@ -171,7 +164,6 @@ function renderAbout() {
       </div>
     </div>`;
 }
-
 // ============ RENDER: SERVICES (CAPABILITIES) ============
 function renderServices() {
   const html = DATA.services.services.map(s => `
@@ -196,14 +188,12 @@ function renderServices() {
       <div class="services-grid">${html}</div>
     </div>`;
 }
-
 // ============ RENDER: PORTFOLIO ============
 function renderPortfolio() {
   const { categories, projects } = DATA.projects;
   const filterHtml = categories.map((c, i) => `
     <button class="filter-btn ${i === 0 ? 'active' : ''}" data-filter="${c.id}">${c.label}</button>
   `).join('');
-
   document.getElementById('work').innerHTML = `
     <div class="container">
       <div class="section-header reveal">
@@ -214,9 +204,7 @@ function renderPortfolio() {
       <div class="portfolio-filters reveal">${filterHtml}</div>
       <div class="portfolio-grid" id="portfolioGrid"></div>
     </div>`;
-
   renderProjectGrid('all');
-
   document.querySelectorAll('.filter-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -225,7 +213,6 @@ function renderPortfolio() {
     });
   });
 }
-
 function renderProjectGrid(filter) {
   const projects = DATA.projects.projects;
   const filtered = filter === 'all' ? projects : projects.filter(p => p.category === filter);
@@ -246,14 +233,11 @@ function renderProjectGrid(filter) {
       </div>
     </article>
   `).join('');
-
   grid.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', () => openModal(card.dataset.project));
   });
-
   grid.querySelectorAll('.project-card').forEach(c => c.classList.add('reveal', 'in'));
 }
-
 // ============ RENDER: FEATURED ============
 function renderFeatured() {
   const featured = DATA.projects.projects.filter(p => p.featured);
@@ -282,7 +266,6 @@ function renderFeatured() {
       </div>
       <div class="featured-list">${html}</div>
     </div>`;
-
   document.querySelectorAll('#featured [data-project]').forEach(el => {
     el.addEventListener('click', (e) => {
       e.preventDefault();
@@ -290,7 +273,6 @@ function renderFeatured() {
     });
   });
 }
-
 // ============ RENDER: ETL DEMO ============
 function renderEtlDemo() {
   const etlProject = DATA.projects.projects.find(p => p.id === 'etl-power-query-pipeline');
@@ -313,7 +295,6 @@ function renderEtlDemo() {
       </div>
     </div>`;
 }
-
 // ============ RENDER: SKILLS ============
 function renderSkills() {
   const html = DATA.content.skills.map(cat => `
@@ -333,7 +314,6 @@ function renderSkills() {
       <div class="skills-grid">${html}</div>
     </div>`;
 }
-
 // ============ RENDER: PROCESS ============
 function renderProcess() {
   const html = DATA.content.process.map(s => `
@@ -355,7 +335,6 @@ function renderProcess() {
       <div class="process-list">${html}</div>
     </div>`;
 }
-
 // ============ RENDER: WHY ME ============
 function renderWhyMe() {
   const html = DATA.content.whyMe.map(w => `
@@ -374,7 +353,6 @@ function renderWhyMe() {
       <div class="why-grid">${html}</div>
     </div>`;
 }
-
 // ============ RENDER: TESTIMONIALS ============
 function renderTestimonials() {
   const active = DATA.testimonials.testimonials.filter(t => t.active);
@@ -411,8 +389,10 @@ function renderTestimonials() {
       ${grid}
     </div>`;
 }
-
 // ============ RENDER: PRICING ============
+// CHANGE 5: Professional tier now shows exclusive Ribbon badge.
+// CHANGE 3 & 4: Ribbon exclusion lines removed from both tiers' "not included" lists —
+//               handled in content.json. The badge below signals inclusion in Professional.
 function renderPricing() {
   if (!DATA.content.pricing.showSection) {
     document.getElementById('pricing').style.display = 'none';
@@ -420,6 +400,12 @@ function renderPricing() {
   }
   const html = DATA.content.pricing.tiers.map(t => `
     <div class="pricing-card ${t.highlighted ? 'highlighted' : ''} reveal">
+      ${t.showRibbonBadge ? `
+        <div class="pricing-ribbon-badge">
+          ${Icons.ribbon}
+          <span>Exclusive: Custom Ribbon Add-in Included</span>
+        </div>
+      ` : ''}
       <div class="pricing-name">${t.name}</div>
       <div class="pricing-price">${t.price}</div>
       <div class="pricing-tagline">${t.tagline}</div>
@@ -441,7 +427,6 @@ function renderPricing() {
       <p class="pricing-note reveal">${DATA.content.pricing.note}</p>
     </div>`;
 }
-
 // ============ RENDER: FAQ ============
 function renderFaq() {
   const html = DATA.content.faqs.map((f, i) => `
@@ -465,7 +450,6 @@ function renderFaq() {
     item.querySelector('.faq-q').addEventListener('click', () => item.classList.toggle('open'));
   });
 }
-
 // ============ RENDER: CONTACT ============
 function renderContact() {
   const p = DATA.profile;
@@ -498,7 +482,6 @@ function renderContact() {
           </div>
           <p class="contact-free-note">${Icons.shield}<span>Discovery calls are free — always. <strong>You're only charged for projects.</strong></span></p>
         </div>
-
         <form class="contact-form reveal" id="contactForm" name="project-inquiry" method="POST" data-netlify="true">
           <input type="hidden" name="form-name" value="project-inquiry">
           <div class="form-row split">
@@ -563,13 +546,11 @@ function renderContact() {
         </form>
       </div>
     </div>`;
-
     document.getElementById('contactForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const params = new URLSearchParams();
     for (const [k, v] of formData.entries()) params.append(k, v);
-
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -584,8 +565,6 @@ function renderContact() {
       alert('Something went wrong sending your message. Please try WhatsApp instead, or copy the email address below.');
     });
   });
-
-  // Copy email button handler
   const copyBtn = document.getElementById('copyEmailBtn');
   if (copyBtn) {
     copyBtn.addEventListener('click', async () => {
@@ -601,7 +580,6 @@ function renderContact() {
     });
   }
 }
-
 // ============ RENDER: FOOTER ============
 function renderFooter() {
   const p = DATA.profile;
@@ -650,7 +628,6 @@ function renderFooter() {
       </div>
     </div>`;
 }
-
 // ============ MODAL ============
 function openModal(projectId) {
   const project = DATA.projects.projects.find(p => p.id === projectId);
@@ -664,7 +641,6 @@ function openModal(projectId) {
       <div class="modal-cat">${project.categoryLabel} · ${project.industry}</div>
       <h2 class="modal-title">${project.title}</h2>
       <p class="modal-tagline">${project.tagline}</p>
-
       <div class="modal-section">
         <h4>The Problem</h4>
         <p>${project.problem}</p>
@@ -673,11 +649,9 @@ function openModal(projectId) {
         <h4>The Solution</h4>
         <p>${project.solution}</p>
       </div>
-
       <div class="modal-outcome">
         <em>Outcome:</em> ${project.outcome}
       </div>
-
       <div class="modal-meta">
         <div>
           <span class="meta-label">Industry</span>
@@ -688,41 +662,45 @@ function openModal(projectId) {
           <span class="meta-value">${project.categoryLabel}</span>
         </div>
       </div>
-
       <div class="modal-section">
         <h4>Key Features</h4>
         <ul class="modal-features">
           ${project.features.map(f => `<li>${f}</li>`).join('')}
         </ul>
       </div>
-
       <div class="modal-section">
         <h4>Stack</h4>
         <div class="modal-stack">
           ${project.stack.map(s => `<span>${s}</span>`).join('')}
         </div>
       </div>
+      ${project.customBuildNote ? `
+        <div class="modal-custom-note">
+          ${Icons.ribbon}
+          <p>${project.customBuildNote}</p>
+        </div>
+      ` : ''}
 
-      ${project.customBuildNote ? `<div class="modal-custom-note">${Icons.ribbon}<p>${project.customBuildNote}</p></div>` : ''}
+      <!-- CHANGE 1: Altorz Ribbon™ modal description — updated text -->
+      <div class="modal-ribbon-explainer">
+        <h4>What's the Altorz Ribbon™?</h4>
+        <p>A dedicated tab — named after your business — installed directly inside Excel. Every automation your team needs is one click away, organised exactly how you work. No hunting through files. No broken macros. Just a clean, permanent interface your team will actually use.</p>
+      </div>
 
       <div class="modal-cta">
         <a href="#contact" class="btn btn-primary" id="modalContact">Discuss a similar build ${Icons.arrow}</a>
         ${project.demoUrl ? `<a href="${project.demoUrl}" target="_blank" class="btn btn-secondary">View live demo ${Icons.external}</a>` : ''}
       </div>
     </div>`;
-
   document.getElementById('modalOverlay').classList.add('open');
   document.body.style.overflow = 'hidden';
-
   document.getElementById('modalClose').addEventListener('click', closeModal);
   document.getElementById('modalContact')?.addEventListener('click', closeModal);
 }
-
 function closeModal() {
   document.getElementById('modalOverlay').classList.remove('open');
   document.body.style.overflow = '';
 }
-
 // ============ SCROLL REVEAL ============
 function initScrollReveal() {
   const observer = new IntersectionObserver((entries) => {
@@ -733,10 +711,8 @@ function initScrollReveal() {
       }
     });
   }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-
   document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
-
 // ============ NAV SCROLL ============
 function initNavScroll() {
   const nav = document.getElementById('nav');
@@ -744,7 +720,6 @@ function initNavScroll() {
     nav.classList.toggle('scrolled', window.scrollY > 30);
   }, { passive: true });
 }
-
 // ============ MODAL ESC ============
 function initModalEsc() {
   document.addEventListener('keydown', (e) => {
@@ -754,12 +729,9 @@ function initModalEsc() {
     if (e.target.id === 'modalOverlay') closeModal();
   });
 }
-
 // ============ BOOT ============
 async function boot() {
   await loadData();
-  // Title tag is set in index.html — do not override here
-
   renderNav();
   renderHero();
   renderTrustStrip();
@@ -776,10 +748,8 @@ async function boot() {
   renderFaq();
   renderContact();
   renderFooter();
-
   initScrollReveal();
   initNavScroll();
   initModalEsc();
 }
-
 boot();

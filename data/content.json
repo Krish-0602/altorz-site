@@ -83,7 +83,7 @@
     {
       "icon": "gear",
       "title": "Delivered as installed software, not files",
-      "description": "Every system ships through the Altorz Ribbon™ — a branded add-in installed on your team's Excel. One-click access to every automation. Not a scattered set of macro files."
+      "description": "Your automations live inside Excel as a dedicated, branded tab — not loose files your team has to manage. Organised, permanent, and built around how your business actually works."
     },
     {
       "icon": "lock",
@@ -112,87 +112,91 @@
     }
   ],
   "pricing": {
-  "showSection": true,
-  "note": "Pricing is indicative. Final pricing depends on scope, complexity, data sources, and timeline. Every project receives a written proposal after a discovery call and before work begins.",
-  "tiers": [
-    {
-      "name": "Standard",
-      "price": "Starting ₹7,500",
-      "tagline": "Fix it. Clean it. Build it better.",
-      "ideal": "Small businesses and teams that need a focused Excel solution, improvement, cleanup, or a single reporting system.",
-      "includes": [
-        "Excel data cleaning, formatting & standardization",
-        "Small-to-medium Excel fixes and formula corrections",
-        "Data migration and restructuring",
-        "Custom Excel templates",
-        "Automated formulas and calculations",
-        "1 Master Sales MIS Dashboard",
-        "Region-wise, Product-wise, Salesperson-wise & Channel-wise views",
-        "Power Query setup for auto-refreshing Tally / ERP export data",
-        "Basic automation and workflow improvements",
-        "WhatsApp-ready PDF report / export",
-        "1-hour team training session",
-        "Recorded walkthrough of the delivered solution",
-        "1-page SOP / User Guide",
-        "30-day post-delivery support"
-      ],
-      "bestFor": "We already use Excel, but our current files are messy, manual, slow or difficult to manage.",
-      "highlighted": false
-    },
-    {
-      "name": "Professional",
-      "price": "Starting ₹20,000",
-      "tagline": "Turn your Excel data into a complete business reporting system.",
-      "ideal": "SMEs, sales teams, management teams and businesses that need multiple interconnected dashboards, automation, reporting and customized Excel workflows.",
-      "includes": [
-        "Everything in Standard",
-        "Multiple interconnected dashboards",
-        "Custom dashboard architecture based on business requirements",
-        "Executive / Management Dashboard",
-        "Sales & Revenue Dashboard",
-        "Product Performance Dashboard",
-        "Salesperson Performance Dashboard",
-        "Region / Branch / Territory Dashboard",
-        "Customer / Channel Analysis",
-        "Target vs Achievement Analysis",
-        "Growth & trend analysis",
-        "KPI tracking and management scorecards",
-        "Advanced Excel formulas and business logic",
-        "Power Query ETL & automated data transformation",
-        "Automated consolidation of multiple Excel / CSV / Tally / ERP exports",
-        "Dynamic PivotTables & PivotCharts",
-        "Interactive filters, slicers and drill-down views",
-        "Automated MIS reporting",
-        "PDF report generation / distribution-ready reports",
-        "Data validation and error-control mechanisms",
-        "Custom Excel templates and workflows",
-        "Conditional formatting & management alerts",
-        "Documentation / SOP",
-        "Team training",
-        "Recorded walkthrough",
-        "45-day post-delivery support"
-      ],
-      "bestFor": "We have multiple reports and data sources, but management wants one reliable Excel-based system to understand the business.",
-      "highlighted": true
-    },
-    {
-      "name": "Excel AMC Retainer",
-      "price": "Starting ₹15,000 / month",
-      "tagline": "Your Excel Expert. On Call. Every Month.",
-      "ideal": "Businesses that depend heavily on Excel and want ongoing access to an Excel specialist without hiring a full-time employee.",
-      "includes": [
-        "15–25 hours of scoped work per month",
+    "showSection": true,
+    "note": "Pricing is indicative. Final pricing depends on scope, complexity, data sources, and timeline. Every project receives a written proposal after a discovery call and before work begins.",
+    "tiers": [
+      {
+        "name": "Standard",
+        "price": "Starting ₹7,500",
+        "tagline": "Fix it. Clean it. Build it better.",
+        "ideal": "Small businesses and teams that need a focused Excel solution, improvement, cleanup, or a single reporting system.",
+        "showRibbonBadge": false,
+        "includes": [
+          "Excel data cleaning, formatting & standardization",
+          "Small-to-medium Excel fixes and formula corrections",
+          "Data migration and restructuring",
+          "Custom Excel templates",
+          "Automated formulas and calculations",
+          "1 Master Sales MIS Dashboard",
+          "Region-wise, Product-wise, Salesperson-wise & Channel-wise views",
+          "Power Query setup for auto-refreshing Tally / ERP export data",
+          "Basic automation and workflow improvements",
+          "WhatsApp-ready PDF report / export",
+          "1-hour team training session",
+          "Recorded walkthrough of the delivered solution",
+          "1-page SOP / User Guide",
+          "30-day post-delivery support"
+        ],
+        "bestFor": "We already use Excel, but our current files are messy, manual, slow or difficult to manage.",
+        "highlighted": false
+      },
+      {
+        "name": "Professional",
+        "price": "Starting ₹20,000",
+        "tagline": "Turn your Excel data into a complete business reporting system.",
+        "ideal": "SMEs, sales teams, management teams and businesses that need multiple interconnected dashboards, automation, reporting and customized Excel workflows.",
+        "showRibbonBadge": true,
+        "includes": [
+          "Everything in Standard",
+          "Custom Excel Ribbon add-in — branded tab installed on your team's Excel",
+          "Multiple interconnected dashboards",
+          "Custom dashboard architecture based on business requirements",
+          "Executive / Management Dashboard",
+          "Sales & Revenue Dashboard",
+          "Product Performance Dashboard",
+          "Salesperson Performance Dashboard",
+          "Region / Branch / Territory Dashboard",
+          "Customer / Channel Analysis",
+          "Target vs Achievement Analysis",
+          "Growth & trend analysis",
+          "KPI tracking and management scorecards",
+          "Advanced Excel formulas and business logic",
+          "Power Query ETL & automated data transformation",
+          "Automated consolidation of multiple Excel / CSV / Tally / ERP exports",
+          "Dynamic PivotTables & PivotCharts",
+          "Interactive filters, slicers and drill-down views",
+          "Automated MIS reporting",
+          "PDF report generation / distribution-ready reports",
+          "Data validation and error-control mechanisms",
+          "Custom Excel templates and workflows",
+          "Conditional formatting & management alerts",
+          "Documentation / SOP",
+          "Team training",
+          "Recorded walkthrough",
+          "45-day post-delivery support"
+        ],
+        "bestFor": "We have multiple reports and data sources, but management wants one reliable Excel-based system to understand the business.",
+        "highlighted": true
+      },
+      {
+        "name": "Excel AMC Retainer",
+        "price": "Starting ₹15,000 / month",
+        "tagline": "Your Excel Expert. On Call. Every Month.",
+        "ideal": "Businesses that depend heavily on Excel and want ongoing access to an Excel specialist without hiring a full-time employee.",
+        "showRibbonBadge": false,
+        "includes": [
+          "15–25 hours of scoped work per month",
           "Dedicated WhatsApp / email channel — 24-hour response SLA",
           "New report and dashboard requests",
           "Ribbon add-in expansions",
           "Monthly review call (30 minutes)",
           "Priority scheduling — Altorz clients first"
-      ],
-      "positioning": "Don't waste hours trying to figure out Excel problems yourself. Your business gets access to an Excel specialist whenever Excel gets in the way.",
-      "highlighted": false
-    }
-  ]
-},
+        ],
+        "positioning": "Don't waste hours trying to figure out Excel problems yourself. Your business gets access to an Excel specialist whenever Excel gets in the way.",
+        "highlighted": false
+      }
+    ]
+  },
   "faqs": [
     {
       "q": "How do you usually price projects?",
@@ -204,7 +208,7 @@
     },
     {
       "q": "What's the Altorz Ribbon™?",
-      "a": "It's the delivery methodology — every Altorz system ships as a branded Excel add-in installed on your team's laptops. Your team gets one-click access to every automation under a dedicated tab named after your business. It's the difference between a 'macro file' that dies in three months and a system that lives in your operations."
+      "a": "A dedicated tab — named after your business — installed directly inside Excel. Every automation your team needs is one click away, organised exactly how you work. No hunting through files. No broken macros. Just a clean, permanent interface your team will actually use."
     },
     {
       "q": "What's your typical turnaround time?",
