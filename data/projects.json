@@ -6,9 +6,40 @@
     { "id": "automation", "label": "Automation Tools" },
     { "id": "templates", "label": "Templates" },
     { "id": "etl", "label": "ETL & Data Engineering" },
-    { "id": "systems", "label": "Business Systems" }
+    { "id": "systems", "label": "Business Systems" },
+    { "id": "web-apps", "label": "Web Applications" }
   ],
   "projects": [
+    {
+      "id": "dsr-mobile-web-app",
+      "title": "Daily Sales Reporting Mobile Web App",
+      "tagline": "A mobile-first DSR replacing WhatsApp + Excel for a Mumbai paint manufacturer's field sales team.",
+      "category": "web-apps",
+      "categoryLabel": "Web Application",
+      "industry": "Paint Manufacturing",
+      "thumbnail": "assets/images/dsr/dsr-mobile-01-company-contact.jpg",
+      "image": "assets/images/dsr/dsr-desktop-01-dashboard.png",
+      "tags": ["React", "Supabase", "Mobile-First", "DSR", "Field Sales", "Multi-Role Auth"],
+      "problem": "The sales team was filing daily visits through a chaotic WhatsApp group — photos of handwritten reports, missed updates, no consolidated view. Branch leadership had zero real-time visibility, and month-end reconciliation ate 2-3 days of manual Excel work. Nobody trusted the numbers.",
+      "solution": "A 16-module mobile-first web app built on React + Supabase + Vercel. Field reps file 4-step daily reports from any smartphone browser in under 2 minutes. Role-based access for executives, branch managers, and admins. Live dashboards consolidate team-wide activity in real time. Hosted on the client's own subdomain, fully owned by the business.",
+      "outcome": "Daily reporting time dropped from fragmented WhatsApp chaos to under 2 minutes per rep. Management now sees live visit activity, product-level analytics, team attendance, and area-wise performance on a single dashboard — no month-end consolidation. Equivalent SaaS cost would have been ₹5–8 lakhs per year; built once for ₹75,000.",
+      "features": [
+        "4-step mobile visit entry (Company, Visit, Business, Follow-up)",
+        "GPS-stamped field attendance tracking (no biometric hardware)",
+        "Role-based auth (Executive, Admin, Branch Manager)",
+        "Real-time admin dashboard with team-wide KPIs",
+        "Analytics: visits by area, client type, product category, time trends",
+        "Follow-up scheduler with next-visit reminders",
+        "Attachment support (site photos, visiting cards, brochures)",
+        "Multi-branch leaderboards and comparisons",
+        "Audit logs and permissions management",
+        "Monthly financials, non-field day tracking, announcements module",
+        "Hosted on client subdomain · Owned by the client"
+      ],
+      "stack": ["React", "Supabase (Postgres + Auth + Storage)", "Vercel", "Tailwind CSS", "Chart.js", "Lovable (dev)"],
+      "featured": true,
+      "customBuildNote": "Flagship web application build — delivered as the first reference build in the Altorz Web Applications service line."
+    },
     {
       "id": "datacleanerpro-ribbon-tool",
       "title": "DataCleanerPro — The Altorz Ribbon™ Reference Build",

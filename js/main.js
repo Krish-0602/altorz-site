@@ -59,13 +59,14 @@ function renderNav() {
         </span>
       </a>
       <div class="nav-links">
-        <a href="#work">Reference Builds</a>
-        <a href="#services">Capabilities</a>
-        <a href="#process">Process</a>
-        <a href="#pricing">Offers</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact" class="nav-cta">Book a discovery call ${Icons.arrow}</a>
-      </div>
+  <a href="#webApps">Services</a>
+  <a href="#services">Capabilities</a>
+  <a href="#work">Reference Builds</a>
+  <a href="#process">Process</a>
+  <a href="#pricing">Offers</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact" class="nav-cta">Book a discovery call ${Icons.arrow}</a>
+</div>
       <button class="nav-toggle" id="navToggle" aria-label="Menu">${Icons.menu}</button>
     </div>`;
   document.getElementById('navToggle').addEventListener('click', () => {
@@ -86,7 +87,7 @@ function renderHero() {
           ${availabilityLabel}
         </div>
         <h1 class="hero-title">
-          I rebuild the spreadsheets<br>
+          I rebuild the systems<br>
           your <em>business</em><br>
           actually runs on.
         </h1>
@@ -125,11 +126,12 @@ function renderHero() {
 // ============ RENDER: TRUST STRIP ============
 function renderTrustStrip() {
   const items = [
-    'Power Query', 'Power Pivot', 'VBA', 'DAX', 'Ribbon Add-ins',
-    'MIS Reporting', 'Inventory Systems', 'Production Dashboards', 'Batch Tracking',
-    'Dealer Schemes', 'Sales MIS', 'CRM Systems', 'ETL Pipelines',
-    'Financial Modeling', 'Data Cleaning'
-  ];
+  'Power Query', 'VBA', 'DAX', 'Ribbon Add-ins', 'MIS Reporting',
+  'React', 'Supabase', 'Vercel', 'Mobile-First Web Apps',
+  'Inventory Systems', 'Production Dashboards', 'DSR Systems',
+  'Sales MIS', 'Custom CRMs', 'ETL Pipelines',
+  'Financial Modeling', 'Data Cleaning', 'Field Team Apps'
+];
   const html = items.map(t => `<div class="trust-item"><span class="icon">✦</span>${t}</div>`).join('');
   document.getElementById('trustStrip').innerHTML = `
     <div class="trust-marquee">${html}${html}</div>`;
@@ -141,12 +143,12 @@ function renderAbout() {
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow"><span class="dot"></span>About Altorz</span>
-        <h2 class="section-title">Excel is the <em>medium.</em><br>Clarity is the <em>product.</em></h2>
+        <h2 class="section-title">Excel or Web App — <em>the medium is a choice.</em><br>Clarity is the <em>product.</em></h2>
       </div>
       <div class="about-grid">
         <div class="reveal">
           <p class="about-lead">
-            <em>Altorz</em> is a boutique Excel consulting practice, serving businesses across India. Founded and run by Krish Borade — a working operator inside a Mumbai manufacturing firm.
+            <em>Altorz</em> is a boutique reporting systems consultancy for Businesses — building Automated Excel Systems and Custom Web Applications. Founded and run by Krish Borade, a working operator inside a Mumbai manufacturing firm.
           </p>
           <div class="about-body">
             ${p.bio.long.map(t => `<p>${t}</p>`).join('')}
@@ -182,10 +184,230 @@ function renderServices() {
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow"><span class="dot"></span>Capabilities</span>
-        <h2 class="section-title">Ten capabilities, <em>one methodology.</em></h2>
-        <p class="section-subtitle">Every Altorz engagement is built from the capabilities below — packaged into three productized offers (see below), or scoped as a bespoke project. All ship through the Altorz Ribbon™.</p>
+        <h2 class="section-title">Ten Excel capabilities, <em>one methodology.</em></h2>
+<p class="section-subtitle">The capabilities below power the Excel Automation service — packaged into productized offers or scoped as a bespoke project. All ship through the Altorz Ribbon™. For custom web applications, see the Services section above.</p>
       </div>
       <div class="services-grid">${html}</div>
+    </div>`;
+}
+// ============ RENDER: SERVICES (Two Tracks) ============
+function renderWebApps() {
+  const webAppBuilds = [
+    { icon: 'report', title: 'Daily Reporting Systems', tagline: 'Field teams, one tap' },
+    { icon: 'users', title: 'Internal CRMs', tagline: 'Built around your sales motion' },
+    { icon: 'chart', title: 'Multi-Branch Dashboards', tagline: 'Live rollups across locations' },
+    { icon: 'clock', title: 'Attendance & Check-ins', tagline: 'GPS-stamped, no hardware' },
+    { icon: 'chat', title: 'Service Ticket Systems', tagline: 'Intake to resolution' },
+    { icon: 'trending', title: 'Visit & Route Tracking', tagline: 'Field activity, verifiable' },
+    { icon: 'box', title: 'Order & Inquiry Management', tagline: 'Inquiry to dispatch, one flow' },
+    { icon: 'flow', title: 'Approval Workflows', tagline: 'Expense, PO, leave' },
+    { icon: 'trophy', title: 'Branch KPI Dashboards', tagline: 'Role-based visibility' }
+  ];
+
+  const buildCardsHtml = webAppBuilds.map(b => `
+    <div class="service-card reveal" style="padding: 24px;">
+      <div class="service-icon" style="width: 36px; height: 36px;">${Icons[b.icon] || Icons.chart}</div>
+      <h4 class="service-title" style="font-size: 17px; margin-bottom: 6px;">${b.title}</h4>
+      <div class="service-tagline" style="font-size: 13px;">${b.tagline}</div>
+    </div>
+  `).join('');
+
+  document.getElementById('webApps').innerHTML = `
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow"><span class="dot"></span>Our Services</span>
+        <h2 class="section-title">Two tracks.<br><em>One methodology.</em></h2>
+        <p class="section-subtitle">Altorz builds in two mediums — automated Excel systems your team runs locally, and custom web applications hosted on your domain. Pick what fits your workflow. Sometimes it's both.</p>
+      </div>
+
+      <!-- SERVICE 01: EXCEL AUTOMATION -->
+      <div style="padding: 48px; background: var(--bg-2); border-left: 3px solid var(--accent); margin-bottom: 32px;" class="reveal">
+        <div class="eyebrow" style="margin-bottom: 20px;"><span class="dot"></span>Service 01 · Excel Automation</div>
+        <h3 style="font-family: var(--font-display, Georgia); font-size: clamp(28px, 3vw, 36px); margin-bottom: 20px; line-height: 1.2;">The Altorz Ribbon™ — Excel systems your <em style="color: var(--accent);">team actually uses.</em></h3>
+        <p style="color: var(--text-muted, #A0A2A8); font-size: 17px; line-height: 1.6; margin-bottom: 28px; max-width: 820px;">
+          Custom Excel Ribbons, dashboards, financial models, ETL pipelines, MIS reporting systems, CRM & sales tools, inventory and HR analytics — delivered as a branded tab inside Excel. One click, zero chaos.
+        </p>
+        <div style="display: flex; gap: 32px; flex-wrap: wrap; margin-bottom: 28px; font-size: 14px; color: var(--text-muted);">
+          <div><strong style="color: var(--accent);">From ₹7,500</strong> · Starting investment</div>
+          <div><strong style="color: var(--accent);">10 capabilities</strong> · See Capabilities section</div>
+          <div><strong style="color: var(--accent);">17 reference builds</strong> · Portfolio proof</div>
+        </div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="#services" class="btn btn-secondary">Explore capabilities ${Icons.arrow}</a>
+          <a href="#work" class="btn btn-secondary">See reference builds ${Icons.arrow}</a>
+        </div>
+      </div>
+
+      <!-- SERVICE 02: WEB APPLICATIONS -->
+      <div style="padding: 48px; background: var(--bg-2); border-left: 3px solid var(--accent);" class="reveal">
+        <div class="eyebrow" style="margin-bottom: 20px;"><span class="dot"></span>Service 02 · Web Applications</div>
+        <h3 style="font-family: var(--font-display, Georgia); font-size: clamp(28px, 3vw, 36px); margin-bottom: 20px; line-height: 1.2;">Custom web applications built around <em style="color: var(--accent);">your business — not someone else's software.</em></h3>
+        <p style="color: var(--text-muted, #A0A2A8); font-size: 17px; line-height: 1.6; margin-bottom: 32px; max-width: 820px;">
+        Whatever runs your business — sales, operations, customer management, approvals, field reporting, inventory, dashboards, internal portals, or something unique to you — we build custom web applications hosted on your domain, branded for your company, owned by you forever. Not SaaS.
+        </p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-bottom: 32px;">
+          ${buildCardsHtml}
+        </div>
+
+        <!-- Not Limited To -->
+        <div style="padding: 32px; border: 1px dashed var(--text-muted, #A0A2A8); text-align: center; margin-bottom: 32px;">
+         <h4 style="font-family: var(--font-display, Georgia); font-size: 22px; margin-bottom: 16px; line-height: 1.3;">These are just <em style="color: var(--accent);">9 of the many</em> web applications we build.</h4>
+         <p style="color: var(--text-muted); font-size: 15px; max-width: 640px; margin: 0 auto 24px; line-height: 1.6;">If your requirement isn't listed here but is similar to our offerings — or you have a completely different idea for a web application — we'd love to explore it with you. Let's connect for a quick discovery call and discuss how we can bring your idea to life.</p>
+         <a href="#contact" class="btn btn-secondary">Book a discovery call ${Icons.arrow}</a>
+        </div>
+
+        <!-- SaaS Comparison -->
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 36px;">
+          <div style="padding: 28px; border: 1px solid var(--text-muted);">
+            <div style="font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 12px;">SaaS Route</div>
+            <h5 style="font-family: var(--font-display, Georgia); font-size: 20px; margin-bottom: 16px;">LeadSquared / Zoho / Salesforce</h5>
+            <div style="font-family: var(--font-display, Georgia); font-size: 36px; color: var(--text-muted); line-height: 1;">₹13,50,000</div>
+            <div style="font-size: 12px; color: var(--text-muted); margin-top: 6px;">over 5 years · 15 users</div>
+          </div>
+          <div style="padding: 28px; border: 1px solid var(--accent);">
+            <div style="font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px;">Altorz Build</div>
+            <h5 style="font-family: var(--font-display, Georgia); font-size: 20px; margin-bottom: 16px;">Custom Web Application</h5>
+            <div style="font-family: var(--font-display, Georgia); font-size: 36px; color: var(--accent); line-height: 1;">From ₹45,000</div>
+            <div style="font-size: 12px; color: var(--text-muted); margin-top: 6px;">one-time · yours forever</div>
+          </div>
+        </div>
+
+        <!-- DSR Flagship -->
+        <div>
+          <div style="font-size: 11px; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 12px;">Flagship Build · Live in Production</div>
+          <h4 style="font-family: var(--font-display, Georgia); font-size: 24px; margin-bottom: 12px; line-height: 1.3;">Daily Reporting System for a Mumbai paint manufacturer</h4>
+          <p style="color: var(--text-muted); font-size: 15px; line-height: 1.6; margin-bottom: 20px; max-width: 820px;">
+            16 integrated modules. Field reps file reports in under 2 minutes. Management sees live dashboards. Built in 4 weeks for ₹75,000 — the equivalent SaaS stack would cost ₹5–8 lakhs per year.
+          </p>
+          <a href="#contact" class="btn btn-primary">Discuss a similar build ${Icons.arrow}</a>
+        </div>
+      </div>
+    </div>`;
+}
+// ============ RENDER: WEB APP EXPLAINER ============
+function renderWebAppExplainer() {
+  const comparisonCards = [
+    {
+      title: 'A Website',
+      icon: 'external',
+      what: 'Public-facing marketing. Visitors read; they don\'t interact with your data.',
+      examples: 'Company sites, blogs, landing pages',
+      highlight: false
+    },
+    {
+      title: 'A SaaS Product',
+      icon: 'box',
+      what: 'Pre-built software you rent monthly. Your workflow is forced to match the vendor\'s design.',
+      examples: 'Zoho, Salesforce, LeadSquared',
+      highlight: false
+    },
+    {
+      title: 'A Mobile App',
+      icon: 'phone',
+      what: 'Native app installed from Play Store or App Store. Expensive to build, slow to update.',
+      examples: 'Uber, WhatsApp, Instagram',
+      highlight: false
+    },
+    {
+      title: 'A Custom Web App',
+      icon: 'bolt',
+      what: 'Software built FOR your business, opened in a browser on any device. One-time cost. You own it.',
+      examples: 'What Altorz builds',
+      highlight: true
+    }
+  ];
+
+  const useCases = [
+    { icon: 'report', title: 'Field Sales Teams', scenario: 'Reps file daily visit reports from phones instead of chaotic WhatsApp groups. HQ sees everything live.' },
+    { icon: 'users', title: 'Multi-Branch Operations', scenario: 'Branch managers submit daily sales and stock from any location. Head office dashboard updates automatically.' },
+    { icon: 'clock', title: 'Distributed Attendance', scenario: 'Field staff mark attendance from site via GPS stamp. No biometric hardware or dedicated devices needed.' },
+    { icon: 'chat', title: 'Service & Complaint Tickets', scenario: 'Customers raise tickets. Technicians get assignments on their phones. SLA tracked automatically.' },
+    { icon: 'flow', title: 'Internal Approvals', scenario: 'Expense claims, leave requests, PO approvals routed to the right managers. Full audit trail built-in.' },
+    { icon: 'box', title: 'Order & Inquiry Management', scenario: 'Sales logs inquiries. Converts to orders. Dispatch updates status. One source of truth replaces 4 Excel files.' }
+  ];
+
+  const comparisonHtml = comparisonCards.map(c => `
+    <div class="service-card reveal" style="${c.highlight ? 'border: 1px solid var(--accent); background: var(--bg);' : ''}">
+      <div class="service-icon" style="${c.highlight ? 'color: var(--accent);' : ''}">${Icons[c.icon] || Icons.chart}</div>
+      <h4 class="service-title" style="font-size: 18px;">${c.title}</h4>
+      <p class="service-desc" style="margin: 12px 0 16px;">${c.what}</p>
+      <div style="font-size: 12px; color: var(--text-muted, #A0A2A8); letter-spacing: 1px; text-transform: uppercase; padding-top: 16px; border-top: 1px solid rgba(160,162,168,0.15);">
+        <strong style="${c.highlight ? 'color: var(--accent);' : 'color: var(--text-muted);'}">Examples:</strong> ${c.examples}
+      </div>
+    </div>
+  `).join('');
+
+  const useCasesHtml = useCases.map(u => `
+    <div class="service-card reveal" style="padding: 28px;">
+      <div class="service-icon" style="width: 40px; height: 40px;">${Icons[u.icon] || Icons.chart}</div>
+      <h4 class="service-title" style="font-size: 18px;">${u.title}</h4>
+      <p class="service-desc" style="margin-top: 8px;">${u.scenario}</p>
+    </div>
+  `).join('');
+
+  document.getElementById('webAppExplainer').innerHTML = `
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow"><span class="dot"></span>New to Custom Web Apps?</span>
+        <h2 class="section-title">What is a web application, <em>really?</em></h2>
+        <p class="section-subtitle">A custom web application is software your team opens in a browser on any device — phone, tablet, laptop. It's built FOR your business, hosted on your own domain, and owned by you. Not a website. Not SaaS. Not a mobile app from the Play Store. Here's the distinction.</p>
+      </div>
+
+      <!-- 4-WAY COMPARISON -->
+      <div class="services-grid" style="margin-bottom: 72px;">
+        ${comparisonHtml}
+      </div>
+
+      <!-- USE CASES -->
+      <div class="section-header reveal" style="text-align: center;">
+        <span class="eyebrow" style="justify-content: center;"><span class="dot"></span>Real Scenarios</span>
+        <h3 class="section-title" style="font-size: clamp(28px, 3vw, 36px);">How a web app helps <em>real businesses.</em></h3>
+        <p class="section-subtitle">Six common workflows where a custom web app replaces WhatsApp + Excel + Google Forms chaos.</p>
+      </div>
+      <div class="services-grid" style="margin-bottom: 72px;">
+        ${useCasesHtml}
+      </div>
+
+      <!-- EXCEL vs WEB APP DECISION TABLE -->
+      <div class="reveal" style="padding: 48px; background: var(--bg); border: 1px solid var(--text-muted);">
+        <div class="eyebrow" style="margin-bottom: 20px;"><span class="dot"></span>Excel or Web App?</div>
+        <h3 style="font-family: var(--font-display, Georgia); font-size: clamp(26px, 3vw, 32px); margin-bottom: 32px; line-height: 1.2;">Not sure which fits your business? <em style="color: var(--accent);">Here's the simple rule.</em></h3>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+          <div style="padding: 28px; background: var(--bg-2); border-left: 3px solid var(--accent);">
+            <div class="eyebrow" style="margin-bottom: 16px;"><span class="dot"></span>Pick Excel Automation when</div>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 10px 0; border-top: 1px solid rgba(160,162,168,0.15); font-size: 15px;">Your work already lives in spreadsheets</li>
+              <li style="padding: 10px 0; border-top: 1px solid rgba(160,162,168,0.15); font-size: 15px;">Finance and accounts teams run the system</li>
+              <li style="padding: 10px 0; border-top: 1px solid rgba(160,162,168,0.15); font-size: 15px;">Monthly MIS and management reporting</li>
+              <li style="padding: 10px 0; border-top: 1px solid rgba(160,162,168,0.15); font-size: 15px;">Complex formulas, financial models, or forecasts</li>
+              <li style="padding: 10px 0; border-top: 1px solid rgba(160,162,168,0.15); font-size: 15px;">One or few power users at desks</li>
+              <li style="padding: 10px 0; border-top: 1px solid rgba(160,162,168,0.15); font-size: 15px;">Historical analysis or executive dashboards</li>
+            </ul>
+          </div>
+          <div style="padding: 28px; background: var(--bg-2); border-left: 3px solid var(--accent);">
+            <div class="eyebrow" style="margin-bottom: 16px;"><span class="dot"></span>Pick Web Application when</div>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 10px 0; border-top: 1px solid rgba(160,162,168,0.15); font-size: 15px;">Your team is distributed, mobile, or in the field</li>
+              <li style="padding: 10px 0; border-top: 1px solid rgba(160,162,168,0.15); font-size: 15px;">Field reps file daily reports from phones</li>
+              <li style="padding: 10px 0; border-top: 1px solid rgba(160,162,168,0.15); font-size: 15px;">Branch managers submit data from multiple locations</li>
+              <li style="padding: 10px 0; border-top: 1px solid rgba(160,162,168,0.15); font-size: 15px;">Daily or live data entry by many simple users</li>
+              <li style="padding: 10px 0; border-top: 1px solid rgba(160,162,168,0.15); font-size: 15px;">Customer-facing or ticket-based workflows</li>
+              <li style="padding: 10px 0; border-top: 1px solid rgba(160,162,168,0.15); font-size: 15px;">You need real-time visibility, not month-end reports</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="margin-top: 32px; padding: 20px; background: var(--bg); border: 1px dashed var(--accent); text-align: center;">
+          <p style="font-size: 15px; color: var(--text-muted); margin: 0;"><strong style="color: var(--accent);">Not sure which one fits?</strong> That's exactly what a 30-min discovery call is for. We'll scope your actual workflow and recommend what matches — even if that means neither.</p>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="reveal" style="text-align: center; margin-top: 72px;">
+        <a href="#contact" class="btn btn-primary">Book a 30-min discovery call ${Icons.arrow}</a>
+      </div>
     </div>`;
 }
 // ============ RENDER: PORTFOLIO ============
@@ -198,8 +420,8 @@ function renderPortfolio() {
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow"><span class="dot"></span>Reference Build Library</span>
-        <h2 class="section-title">17 systems. <em>One methodology.</em></h2>
-        <p class="section-subtitle">Every reference build below is a fully functional Excel system demonstrating the Altorz methodology across MIS, inventory, financial modeling, CRM, HR, and operations analytics. Live demos available on discovery calls.</p>
+        <h2 class="section-title">18 reference builds. <em>Two mediums.</em></h2>
+        <p class="section-subtitle">17 Excel systems and 1 live web application — all built using the Altorz methodology across MIS, inventory, financial modeling, CRM, HR, operations analytics, and daily reporting. Live demos available on discovery calls.</p>
       </div>
       <div class="portfolio-filters reveal">${filterHtml}</div>
       <div class="portfolio-grid" id="portfolioGrid"></div>
@@ -261,8 +483,8 @@ function renderFeatured() {
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow"><span class="dot"></span>Featured Reference Builds</span>
-        <h2 class="section-title">Four builds, in <em>detail.</em></h2>
-        <p class="section-subtitle">DataCleanerPro is Reference Build #1 of the Altorz Ribbon™ methodology. The other three illustrate how the methodology applies across MIS, ETL, and CRM systems for manufacturing operations.</p>
+        <h2 class="section-title">Five builds, in <em>detail.</em></h2>
+        <p class="section-subtitle">The DSR Mobile Web App is Reference Build #1 of the Altorz Web Applications service line — our flagship live production build. DataCleanerPro is Reference Build #1 of the Altorz Ribbon™ methodology — our Excel Automation flagship. Three more Excel builds show how the methodology applies across MIS, ETL, and CRM for manufacturing.</p>
       </div>
       <div class="featured-list">${html}</div>
     </div>`;
@@ -295,6 +517,111 @@ function renderEtlDemo() {
       </div>
     </div>`;
 }
+// ============ RENDER: DSR LIVE DEMO ============
+function renderDsrDemo() {
+  // ⚠️ REPLACE THIS WITH YOUR ACTUAL YOUTUBE VIDEO ID (from Step 2)
+  const YOUTUBE_ID = 'FR_oFkJKexA';
+
+  const mobileScreens = [
+    { file: 'dsr-mobile-01-company-contact.jpg', label: 'Step 1 — Company & Contact' },
+    { file: 'dsr-mobile-02-visit-details.jpg', label: 'Step 2 — Visit Details' },
+    { file: 'dsr-mobile-03-business-info.jpg', label: 'Step 3 — Business Info' },
+    { file: 'dsr-mobile-04-follow-up.jpg', label: 'Step 4 — Follow-up' },
+    { file: 'dsr-mobile-05-visit-submitted.jpg', label: 'Visit Submitted' }
+  ];
+
+  const desktopScreens = [
+    { file: 'dsr-desktop-01-dashboard.png', label: 'Admin Dashboard · Team-wide Activity' },
+    { file: 'dsr-desktop-02-team-attendance.png', label: 'Team Attendance Monitor' },
+    { file: 'dsr-desktop-03-analytics.png', label: 'Analytics · Area, Client Type, Products' }
+  ];
+
+  const metrics = [
+    { num: '16', label: 'Integrated Modules' },
+    { num: '4 wks', label: 'Build Timeline' },
+    { num: '<2 min', label: 'Per Daily Report' },
+    { num: '₹75k', label: 'One-time Build Cost' }
+  ];
+
+  const mobileHtml = mobileScreens.map(s => `
+    <div class="reveal" style="flex: 0 0 220px; max-width: 220px; scroll-snap-align: start;">
+      <img src="assets/images/dsr/${s.file}" alt="${s.label}" loading="lazy" style="width: 100%; display: block; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.08);">
+      <p style="font-size: 12px; color: var(--text-muted); margin-top: 14px; text-align: center; letter-spacing: 0.5px;">${s.label}</p>
+    </div>
+  `).join('');
+
+  const desktopHtml = desktopScreens.map(s => `
+    <div class="reveal">
+      <div style="border: 1px solid rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+        <img src="assets/images/dsr/${s.file}" alt="${s.label}" loading="lazy" style="width: 100%; display: block;">
+      </div>
+      <p style="font-size: 13px; color: var(--text-muted); margin-top: 14px; letter-spacing: 0.5px;">${s.label}</p>
+    </div>
+  `).join('');
+
+  const metricsHtml = metrics.map(m => `
+    <div class="reveal" style="text-align: center;">
+      <div style="font-family: var(--font-display, Georgia); font-size: clamp(36px, 4vw, 52px); color: var(--accent); line-height: 1;">${m.num}</div>
+      <div style="font-family: Consolas, monospace; font-size: 11px; color: var(--text-muted); letter-spacing: 2px; text-transform: uppercase; margin-top: 10px;">${m.label}</div>
+    </div>
+  `).join('');
+
+  document.getElementById('dsrDemo').innerHTML = `
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="eyebrow"><span class="dot"></span>Live Demo · Web Application</span>
+        <h2 class="section-title">Watch a mobile DSR replace<br>WhatsApp + Excel chaos in <em>50 seconds.</em></h2>
+        <p class="section-subtitle">Flagship web application built by Altorz for a Mumbai paint manufacturer. 16 integrated modules, mobile-first, hosted on their own domain. Field reps file daily reports in under 2 minutes. Management sees live dashboards. Zero WhatsApp chaos.</p>
+      </div>
+
+            <!-- VIDEO EMBED (9:16 vertical for Shorts) -->
+      <div class="reveal" style="margin-bottom: 80px;">
+        <div style="display: flex; justify-content: center;">
+          <div style="position: relative; width: 100%; max-width: 360px; aspect-ratio: 9 / 16; border: 1px solid var(--accent); background: var(--bg); border-radius: 20px; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
+            <iframe
+              src="https://www.youtube.com/embed/${YOUTUBE_ID}?rel=0"
+              title="DSR Mobile Web App — 50-second Walkthrough"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"></iframe>
+          </div>
+        </div>
+        <p style="text-align: center; margin-top: 20px; color: var(--text-muted); font-size: 13px;">50-second walkthrough · Mobile field-rep view · Recorded on actual device</p>
+      </div>
+
+      <!-- MOBILE SCREENSHOTS -->
+      <div style="margin-bottom: 80px;" class="reveal">
+        <div class="eyebrow" style="margin-bottom: 24px;"><span class="dot"></span>Mobile Field App — 4-Step Visit Entry</div>
+        <div style="display: flex; gap: 24px; overflow-x: auto; padding: 10px 2px 24px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch;">
+          ${mobileHtml}
+        </div>
+        <p style="font-size: 12px; color: var(--text-muted); text-align: center; margin-top: 8px;">↔ Scroll to see all 5 screens</p>
+      </div>
+
+      <!-- DESKTOP SCREENSHOTS -->
+      <div style="margin-bottom: 80px;" class="reveal">
+        <div class="eyebrow" style="margin-bottom: 24px;"><span class="dot"></span>Admin Dashboard — Desktop Views</div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;">
+          ${desktopHtml}
+        </div>
+      </div>
+
+      <!-- METRICS -->
+      <div class="reveal" style="padding: 48px; background: var(--bg); border-left: 3px solid var(--accent); margin-bottom: 48px;">
+        <div class="eyebrow" style="margin-bottom: 32px;"><span class="dot"></span>By The Numbers</div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 40px;">
+          ${metricsHtml}
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="reveal" style="text-align: center;">
+        <a href="#contact" class="btn btn-primary">Discuss a similar build ${Icons.arrow}</a>
+      </div>
+    </div>`;
+}
 // ============ RENDER: SKILLS ============
 function renderSkills() {
   const html = DATA.content.skills.map(cat => `
@@ -309,7 +636,7 @@ function renderSkills() {
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow"><span class="dot"></span>The Toolkit</span>
-        <h2 class="section-title">A full <em>stack</em> for business-native Excel automation.</h2>
+        <h2 class="section-title">A full <em>stack</em> for both services.<br>Excel automation. <em>Web applications.</em></h2>
       </div>
       <div class="skills-grid">${html}</div>
     </div>`;
@@ -330,7 +657,8 @@ function renderProcess() {
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow"><span class="dot"></span>Process</span>
-        <h2 class="section-title">From <em>discovery</em> to <em>handover</em>.<br>Seven steps. No surprises.</h2>
+        <h2 class="section-title">From <em>discovery</em> to <em>handover</em>.<br>Seven steps for both services. <em>No surprises.</em></h2>
+        <p class="section-subtitle">Whether you're commissioning an Excel System or a Custom Web Application, the Altorz process is the same seven steps — fixed scope, weekly demos, clear timelines, and documented handover. No scope creep, no surprise invoices.</p>
       </div>
       <div class="process-list">${html}</div>
     </div>`;
@@ -389,16 +717,15 @@ function renderTestimonials() {
       ${grid}
     </div>`;
 }
-// ============ RENDER: PRICING ============
-// CHANGE 5: Professional tier now shows exclusive Ribbon badge.
-// CHANGE 3 & 4: Ribbon exclusion lines removed from both tiers' "not included" lists —
-//               handled in content.json. The badge below signals inclusion in Professional.
+// ============ RENDER: PRICING (Two Offer Groups) ============
 function renderPricing() {
   if (!DATA.content.pricing.showSection) {
     document.getElementById('pricing').style.display = 'none';
     return;
   }
-  const html = DATA.content.pricing.tiers.map(t => `
+
+  // Excel tiers from content.json (unchanged)
+  const excelHtml = DATA.content.pricing.tiers.map(t => `
     <div class="pricing-card ${t.highlighted ? 'highlighted' : ''} reveal">
       ${t.showRibbonBadge ? `
         <div class="pricing-ribbon-badge">
@@ -416,14 +743,96 @@ function renderPricing() {
       <a href="#contact" class="btn btn-secondary" style="width:100%;justify-content:center;">Book a discovery call ${Icons.arrow}</a>
     </div>
   `).join('');
+
+  // Web Apps tiers (hardcoded for now — can move to content.json later)
+  const webAppsTiers = [
+    {
+      name: 'Build Starter',
+      price: 'From ₹45,000',
+      tagline: 'Single-workflow web app',
+      ideal: 'Ideal for: One critical workflow — a DSR, a simple CRM, an attendance system — that needs to leave WhatsApp or Excel.',
+      includes: [
+        'Single workflow web app',
+        '2–4 screens, 1 user role',
+        'Basic reporting dashboard',
+        'Mobile-first responsive design',
+        'Hosted on your Vercel + Supabase',
+        '4–6 week delivery timeline',
+        '30 days of post-launch support'
+      ]
+    },
+    {
+      name: 'Build Professional',
+      price: 'From ₹75,000',
+      tagline: 'Multi-workflow business application',
+      ideal: 'Ideal for: Ops teams needing a unified app across 3–6 integrated workflows with role-based access and dashboards.',
+      includes: [
+        'Multi-workflow web app',
+        '3–6 integrated modules',
+        '2–3 user roles with permissions',
+        'Multi-level dashboards + analytics',
+        'Excel / PDF exports',
+        '8–12 week delivery timeline',
+        '30 days of post-launch support'
+      ],
+      highlighted: true
+    },
+    {
+      name: 'Build + AMC',
+      price: '+ ₹10,000 / month',
+      tagline: 'Any Build tier plus 6-month retainer',
+      ideal: 'Ideal for: Businesses who want ongoing bug fixes, minor feature additions, and WhatsApp SLA support.',
+      includes: [
+        'Any Build tier above',
+        'WhatsApp SLA (24-hour response)',
+        'Bug fixes included',
+        'Minor feature additions',
+        'Monthly health check',
+        'Hosting monitoring + alerts',
+        '6-month minimum commitment'
+      ]
+    }
+  ];
+
+  const webAppsHtml = webAppsTiers.map(t => `
+    <div class="pricing-card ${t.highlighted ? 'highlighted' : ''} reveal">
+      <div class="pricing-name">${t.name}</div>
+      <div class="pricing-price">${t.price}</div>
+      <div class="pricing-tagline">${t.tagline}</div>
+      <div class="pricing-ideal">${t.ideal}</div>
+      <ul class="pricing-list">
+        ${t.includes.map(i => `<li>${i}</li>`).join('')}
+      </ul>
+      <a href="#contact" class="btn btn-secondary" style="width:100%;justify-content:center;">Book a discovery call ${Icons.arrow}</a>
+    </div>
+  `).join('');
+
   document.getElementById('pricing').innerHTML = `
     <div class="container">
       <div class="section-header reveal">
-        <span class="eyebrow"><span class="dot"></span>Three Productized Offers</span>
-        <h2 class="section-title">Three ways to work with Altorz.<br>Fixed by scope, <em>not by hour.</em></h2>
+        <span class="eyebrow"><span class="dot"></span>Six Productized Offers</span>
+        <h2 class="section-title">Two tracks. Six offers.<br>Fixed by scope, <em>not by hour.</em></h2>
         <p class="section-subtitle">Every engagement gets a written proposal after a discovery call. Pilot Program pricing is available for the first three clients only — quoted privately on request.</p>
       </div>
-      <div class="pricing-grid">${html}</div>
+
+      <!-- EXCEL AUTOMATION OFFERS -->
+      <div class="reveal" style="margin-bottom: 72px;">
+        <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; padding-bottom: 20px; border-bottom: 1px solid var(--text-muted);">
+          <div style="font-family: var(--font-display, Georgia); font-size: clamp(22px, 2.5vw, 28px);">Excel Automation <em style="color: var(--accent);">· 3 offers</em></div>
+          <div style="font-size: 13px; color: var(--text-muted); margin-left: auto;">Delivered through the Altorz Ribbon™</div>
+        </div>
+        <div class="pricing-grid">${excelHtml}</div>
+      </div>
+
+      <!-- WEB APPLICATIONS OFFERS -->
+      <div class="reveal">
+        <div style="display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 32px; padding-bottom: 20px; border-bottom: 1px solid var(--text-muted);">
+          <div style="font-family: var(--font-display, Georgia); font-size: clamp(22px, 2.5vw, 28px);">Web Applications <em style="color: var(--accent);">· 3 offers</em></div>
+          <div style="font-size: 13px; color: var(--text-muted); margin-left: auto;">Hosted on your domain · Owned by you</div>
+        </div>
+        <div class="pricing-grid">${webAppsHtml}</div>
+      </div>
+
       <p class="pricing-note reveal">${DATA.content.pricing.note}</p>
     </div>`;
 }
@@ -494,44 +903,46 @@ function renderContact() {
               <input class="form-input" type="email" name="email" required>
             </div>
           </div>
-          <div class="form-row split">
-            <div>
-              <label class="form-label">Company</label>
-              <input class="form-input" type="text" name="company">
-            </div>
-            <div>
-              <label class="form-label">Budget range</label>
-              <select class="form-select" name="budget">
-                <option value="">Choose one</option>
-                <option>Under ₹10,000</option>
-                <option>₹10,000 – ₹20,000</option>
-                <option>₹20,000 – ₹50,000</option>
-                <option>₹50,000 – ₹75,000</option>
-                <option>₹75,000+</option>
-                <option>AMC / Retainer</option>
-                <option>Not sure yet</option>
-              </select>
-            </div>
+          <div class="form-row">
+            <label class="form-label">Company</label>
+            <input class="form-input" type="text" name="company">
           </div>
           <div class="form-row">
-            <label class="form-label">What are you looking to build?</label>
-            <select class="form-select" name="service">
-              <option value="">Choose an offer</option>
-              <option>Executive Dashboards</option>
-              <option>Financial Modeling</option>
-              <option>Customised Excel Automation Tools</option>
-              <option>Power Query ETL</option>
-              <option>VBA Automation</option>
-              <option>MIS Reporting Systems</option>
-              <option>Data Cleaning & Migration</option>
-              <option>CRM & Sales Systems</option>
-              <option>Inventory & Supply Chain</option>
-              <option>HR & Workforce Analytics</option>
-              <option>Excel AMC Retainer</option>
-              <option>Bespoke project</option>
-              <option>Something else/ Not sure — book a discovery call</option>
-            </select>
-          </div>
+  <label class="form-label">What are you looking to build?</label>
+  <select class="form-select" name="service">
+    <option value="">Choose an offer</option>
+    <optgroup label="— Excel Automation —">
+      <option>Executive Dashboards</option>
+      <option>Financial Modeling</option>
+      <option>Customised Excel Automation Tools</option>
+      <option>Power Query ETL</option>
+      <option>VBA Automation</option>
+      <option>MIS Reporting Systems</option>
+      <option>Data Cleaning & Migration</option>
+      <option>CRM & Sales Systems (Excel)</option>
+      <option>Inventory & Supply Chain</option>
+      <option>HR & Workforce Analytics</option>
+      <option>Excel AMC Retainer</option>
+    </optgroup>
+    <optgroup label="— Web Applications —">
+      <option>Daily Reporting System (DSR)</option>
+      <option>Internal CRM Web App</option>
+      <option>Multi-Branch Dashboard</option>
+      <option>Attendance & Check-ins</option>
+      <option>Service / Complaint Ticket System</option>
+      <option>Visit & Route Tracking</option>
+      <option>Order & Inquiry Management</option>
+      <option>Approval Workflows</option>
+      <option>Build Starter (From ₹45,000)</option>
+      <option>Build Professional (From ₹75,000)</option>
+      <option>Build + AMC Retainer</option>
+    </optgroup>
+    <optgroup label="— Other —">
+      <option>Bespoke project</option>
+      <option>Something else / Not sure — book a discovery call</option>
+    </optgroup>
+  </select>
+</div>
           <div class="form-row">
             <label class="form-label">Tell me about your operation</label>
             <textarea class="form-textarea" name="message" placeholder="What does your current reporting workflow look like? Where does it break? Screenshots or file samples welcome."></textarea>
@@ -588,7 +999,7 @@ function renderFooter() {
       <div class="footer-top">
         <div>
           <div class="footer-brand-title">${p.name}</div>
-          <p class="footer-brand-desc">${p.title}. Building Automated Excel Systems for Businesses across India — delivered through the Altorz Ribbon™.</p>
+          <p class="footer-brand-desc">${p.title}. Building reporting systems for Businesses — Automated Excel Systems through the Altorz Ribbon™, and Custom Web Applications hosted on your domain.</p>
           <div style="display:flex;gap:12px;">
             <a href="tel:${p.contact.phone.replace(/[^+0-9]/g, '')}" class="contact-channel-icon" style="width:36px;height:36px;">${Icons.phone}</a>
             <a href="${p.contact.whatsapp}" target="_blank" rel="noopener" class="contact-channel-icon" style="width:36px;height:36px;">${Icons.whatsapp}</a>
@@ -597,15 +1008,16 @@ function renderFooter() {
           </div>
         </div>
         <div class="footer-col">
-          <h5>Navigate</h5>
-          <ul>
-            <li><a href="#work">Reference Builds</a></li>
-            <li><a href="#services">Capabilities</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#pricing">Offers</a></li>
-            <li><a href="#faq">FAQ</a></li>
-          </ul>
-        </div>
+  <h5>Navigate</h5>
+  <ul>
+  <li><a href="#webApps">Services</a></li>
+  <li><a href="#services">Capabilities</a></li>
+  <li><a href="#work">Reference Builds</a></li>
+  <li><a href="#process">Process</a></li>
+  <li><a href="#pricing">Offers</a></li>
+  <li><a href="#faq">FAQ</a></li>
+</ul>
+</div>
         <div class="footer-col">
           <h5>Capabilities</h5>
           <ul>
@@ -681,11 +1093,18 @@ function openModal(projectId) {
         </div>
       ` : ''}
 
-      <!-- CHANGE 1: Altorz Ribbon™ modal description — updated text -->
-      <div class="modal-ribbon-explainer">
-        <h4>What's the Altorz Ribbon™?</h4>
-        <p>A dedicated tab — named after your business — installed directly inside Excel. Every automation your team needs is one click away, organised exactly how you work. No hunting through files. No broken macros. Just a clean, permanent interface your team will actually use.</p>
-      </div>
+      <!-- Conditional explainer: shows web-app explainer for web-apps, Ribbon explainer for everything else -->
+      ${project.category === 'web-apps' ? `
+        <div class="modal-ribbon-explainer">
+          <h4>What's a Web Application (Web App)?</h4>
+          <p>Software built FOR your business, opened in a browser on any device — phone, tablet, laptop. Hosted on your own domain, branded for your company, and owned by you forever. Not SaaS you rent. Not a mobile app from the Play Store. One-time build cost, zero per-user fees, and the workflow matches how your team actually works — not the other way around.</p>
+        </div>
+      ` : `
+        <div class="modal-ribbon-explainer">
+          <h4>What's the Altorz Ribbon™?</h4>
+          <p>A dedicated tab — named after your business — installed directly inside Excel. Every automation your team needs is one click away, organised exactly how you work. No hunting through files. No broken macros. Just a clean, permanent interface your team will actually use.</p>
+        </div>
+      `}
 
       <div class="modal-cta">
         <a href="#contact" class="btn btn-primary" id="modalContact">Discuss a similar build ${Icons.arrow}</a>
@@ -737,9 +1156,12 @@ async function boot() {
   renderTrustStrip();
   renderAbout();
   renderServices();
+  renderWebApps();
+  renderWebAppExplainer();
   renderPortfolio();
   renderFeatured();
   renderEtlDemo();
+  renderDsrDemo();
   renderSkills();
   renderProcess();
   renderWhyMe();

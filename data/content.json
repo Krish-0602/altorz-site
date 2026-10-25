@@ -1,46 +1,46 @@
 {
-  "process": [
+    "process": [
     {
       "step": "01",
-      "title": "Discovery Call",
-      "duration": "30 min",
-      "description": "We dig into what you're actually trying to solve — not just what you're asking for. Free, no commitment. If Altorz isn't the fit, I'll say so on the call."
+      "title": "Discovery",
+      "description": "A 30-minute free call to map your current workflow, user roles, pain points, and the real business outcome you need. If Altorz isn't the right fit, we say so directly.",
+      "duration": "30 min · Free"
     },
     {
       "step": "02",
       "title": "Scope & Proposal",
-      "duration": "1-2 days",
-      "description": "I document deliverables, timeline, and price in writing. You approve, we proceed. No surprises."
+      "description": "A written proposal with full module list, user roles, timeline, investment and payment schedule. Signed before any build work begins. No surprises later.",
+      "duration": "3–5 days"
     },
     {
       "step": "03",
-      "title": "Data & Design",
-      "duration": "2-4 days",
-      "description": "I map your data sources, design the ribbon architecture, and share wireframes for sign-off before building."
+      "title": "Design",
+      "description": "For Excel: data model, workbook architecture, and Ribbon layout. For web apps: UI/UX mockups, screen flows, and database schema. Reviewed with you before build.",
+      "duration": "1–2 weeks"
     },
     {
       "step": "04",
-      "title": "Build & Iterate",
-      "duration": "3-10 days",
-      "description": "I build in milestones. You see progress every 2–3 days, give feedback, and we adjust as we go - not at the end."
+      "title": "Build",
+      "description": "Core development with weekly progress demos so you can redirect early. Excel systems built in Power Query, VBA and Office Scripts. Web apps built in React + Supabase + Vercel.",
+      "duration": "2–12 weeks"
     },
     {
       "step": "05",
-      "title": "Test & Validate",
-      "duration": "1–2 days",
-      "description": "Stress tests against edge cases, real dataset sizes, and refresh failures. Every Altorz systems ships Production-grade, not prototype-grade."
+      "title": "UAT",
+      "description": "Your team tests on real production data. All feedback and refinements incorporated before go-live. We don't ship a system that isn't ready for daily use.",
+      "duration": "1 week"
     },
     {
       "step": "06",
-      "title": "Delivery + Handover",
-      "duration": "1 day",
-      "description": "Ribbon installation on your teams's laptops, walkthrough call, recorded video tutorial, and a formal SOP documentation. You and your team can actually run it without me."
+      "title": "Go-Live",
+      "description": "Excel systems installed in your team's Excel environment as the branded Altorz Ribbon™. Web apps deployed to your own subdomain on your Vercel + Supabase account.",
+      "duration": "1 day"
     },
     {
       "step": "07",
-      "title": "30-45 Day Support",
-      "duration": "Included",
-      "description": "Free bug fixes, tweaks, and questions for 30-45 days post-delivery (project-dependent). After that, optional AMC retainer for ongoing changes."
+      "title": "Handover + Support",
+      "description": "Documented SOP for every automation. Team training delivered. 30-day (Excel) or 45-day (web app) post-launch support window for bug fixes and user questions.",
+      "duration": "30–45 days"
     }
   ],
   "skills": [
@@ -67,6 +67,18 @@
     {
       "category": "Domain Expertise",
       "items": ["Finance & Accounting", "Sales Ops", "HR Analytics", "Supply Chain", "CRM Systems", "Marketing Analytics"]
+    },
+    {
+      "category": "Web App Frontend",
+      "items": ["React", "TypeScript", "Tailwind CSS", "Chart.js", "Mobile-First Responsive", "Progressive Web Apps"]
+    },
+    {
+      "category": "Web App Backend",
+      "items": ["Supabase", "PostgreSQL", "Row-Level Security", "REST APIs", "Real-time Subscriptions", "File Storage"]
+    },
+    {
+      "category": "Hosting & Deploy",
+      "items": ["Vercel", "Netlify", "GitHub", "CI/CD Pipelines", "Custom Domains", "SSL/HTTPS"]
     }
   ],
   "whyMe": [
