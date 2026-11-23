@@ -60,6 +60,7 @@ function renderNav() {
       </a>
       <div class="nav-links">
   <a href="#webApps">Services</a>
+  <a href="/mis-autopilot.html">MIS Autopilot</a>
   <a href="#services">Capabilities</a>
   <a href="#work">Reference Builds</a>
   <a href="#process">Process</a>
@@ -216,8 +217,8 @@ function renderWebApps() {
     <div class="container">
       <div class="section-header reveal">
         <span class="eyebrow"><span class="dot"></span>Our Services</span>
-        <h2 class="section-title">Two tracks.<br><em>One methodology.</em></h2>
-        <p class="section-subtitle">Altorz builds in two mediums — automated Excel systems your team runs locally, and custom web applications hosted on your domain. Pick what fits your workflow. Sometimes it's both.</p>
+        <h2 class="section-title">Three tracks.<br><em>One methodology.</em></h2>
+        <p class="section-subtitle">Altorz builds automated Excel systems your team runs locally, custom web applications hosted on your domain, and automated Power BI reporting with AI-written summaries. Pick what fits your workflow. Sometimes it's both.</p>
       </div>
 
       <!-- SERVICE 01: EXCEL AUTOMATION -->
@@ -281,6 +282,23 @@ function renderWebApps() {
             16 integrated modules. Field reps file reports in under 2 minutes. Management sees live dashboards. Built in 4 weeks for ₹75,000 — the equivalent SaaS stack would cost ₹5–8 lakhs per year.
           </p>
           <a href="#contact" class="btn btn-primary">Discuss a similar build ${Icons.arrow}</a>
+        </div>
+      </div>
+
+      <!-- SERVICE 03: MIS AUTOPILOT (POWER BI + AI) -->
+      <div style="padding: 48px; background: var(--bg-2); border-left: 3px solid var(--accent); margin-top: 32px;" class="reveal">
+        <div class="eyebrow" style="margin-bottom: 20px;"><span class="dot"></span>Service 03 · Power BI + AI Reporting</div>
+        <h3 style="font-family: var(--font-display, Georgia); font-size: clamp(28px, 3vw, 36px); margin-bottom: 20px; line-height: 1.2;">Altorz MIS Autopilot — your monthly sales &amp; collections MIS, <em style="color: var(--accent);">built and emailed automatically.</em></h3>
+        <p style="color: var(--text-muted, #A0A2A8); font-size: 17px; line-height: 1.6; margin-bottom: 28px; max-width: 820px;">
+          Raw Tally or ERP exports in. A Power BI dashboard, an AI-written owner summary and a PDF email out. The AI writes the words, the data model calculates every number, and you approve each email before it goes.
+        </p>
+        <div style="margin-bottom: 28px; border: 1px solid rgba(255,255,255,0.1); max-width: 820px;">
+          <img src="assets/images/mis/mis-03-dashboard.jpg" alt="MIS Autopilot Power BI dashboard (demo on fictional data)" loading="lazy" style="width: 100%; display: block;">
+        </div>
+        <p style="font-size: 13px; color: var(--text-muted); margin: -16px 0 28px;">Demo build on a fictional distributor dataset. No client data shown.</p>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a href="/mis-autopilot.html" class="btn btn-primary">See how MIS Autopilot works ${Icons.arrow}</a>
+          <a href="#contact" class="btn btn-secondary">Book a free 15-minute MIS review ${Icons.arrow}</a>
         </div>
       </div>
     </div>`;
@@ -1011,6 +1029,7 @@ function renderFooter() {
   <h5>Navigate</h5>
   <ul>
   <li><a href="#webApps">Services</a></li>
+  <li><a href="/mis-autopilot.html">MIS Autopilot</a></li>
   <li><a href="#services">Capabilities</a></li>
   <li><a href="#work">Reference Builds</a></li>
   <li><a href="#process">Process</a></li>

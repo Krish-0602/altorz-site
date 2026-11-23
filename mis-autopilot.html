@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Altorz MIS Autopilot: Automated Sales &amp; Collections MIS for Distributors — Altorz</title>
+<meta name="description" content="Your monthly sales and collections MIS, built from raw Tally or ERP exports, with a Power BI dashboard and an AI-written summary you approve before it is emailed. For distributors and manufacturers.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Altorz MIS Autopilot: your monthly MIS, built and emailed automatically">
+<meta property="og:description" content="Raw ERP exports in. Power BI dashboard, owner summary and PDF email out. You approve every email before it goes.">
+<meta property="og:image" content="https://www.altorz.com/assets/images/mis/mis-03-dashboard.jpg">
+<meta property="og:url" content="https://www.altorz.com/mis-autopilot.html">
+<meta property="og:site_name" content="Altorz">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.altorz.com/assets/images/mis/mis-03-dashboard.jpg">
+<link rel="icon" type="image/png" href="/assets/images/altorz-favicon.png">
+
+<style>
+/* ============================================
+   ALTORZ — Editorial Tech Dark
+   MIS Autopilot Service Page
+   (same design tokens as web-applications.html)
+   ============================================ */
+:root {
+  --void-black: #0A0B0F;
+  --bright-paper: #F5F5F7;
+  --signal-lime: #C9FF5B;
+  --muted-steel: #6B6E75;
+  --pale-lime: #F0F9DC;
+  --dim-steel: #8A8C92;
+  --line: #1F2027;
+  --panel: #121318;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Aptos', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--void-black);
+  color: var(--bright-paper);
+  line-height: 1.6;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+.container { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+h1, h2, h3, h4 { font-family: Georgia, 'Fraunces', serif; font-weight: normal; letter-spacing: -0.01em; line-height: 1.15; }
+em { font-style: italic; color: var(--signal-lime); }
+.mono { font-family: Consolas, 'JetBrains Mono', monospace; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--signal-lime); }
+
+/* NAV */
+nav { padding: 24px 0; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: rgba(10,11,15,0.92); backdrop-filter: blur(12px); z-index: 100; }
+nav .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-family: Georgia, serif; font-size: 22px; color: var(--bright-paper); text-decoration: none; }
+.logo span { color: var(--signal-lime); }
+.nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
+.nav-links a { color: var(--dim-steel); text-decoration: none; font-size: 15px; transition: color 0.2s; }
+.nav-links a:hover { color: var(--bright-paper); }
+.nav-links a.active { color: var(--signal-lime); }
+
+/* BUTTONS */
+.cta-row { display: flex; gap: 20px; flex-wrap: wrap; }
+.btn { display: inline-block; padding: 18px 32px; font-size: 15px; font-weight: 500; text-decoration: none; letter-spacing: 0.02em; border-radius: 2px; transition: all 0.2s; border: none; }
+.btn-primary { background: var(--signal-lime); color: var(--void-black) !important; }
+.btn-primary:hover { background: var(--pale-lime); transform: translateY(-1px); }
+.btn-secondary { background: transparent; color: var(--bright-paper); border: 1px solid #3A3B42; }
+.btn-secondary:hover { border-color: var(--signal-lime); color: var(--signal-lime); }
+
+/* HERO */
+.hero { padding: 110px 0 90px; border-bottom: 1px solid var(--line); }
+.hero .mono { margin-bottom: 32px; }
+.hero h1 { font-size: 64px; margin-bottom: 32px; max-width: 940px; }
+.hero p.lead { font-size: 21px; color: var(--dim-steel); max-width: 760px; margin-bottom: 48px; line-height: 1.5; }
+.hero-shot { margin-top: 72px; border: 1px solid #2A2B33; box-shadow: 0 30px 60px rgba(0,0,0,0.5); }
+.caption { font-size: 13px; color: var(--dim-steel); margin-top: 14px; letter-spacing: 0.3px; }
+
+/* DEMO NOTICE */
+.notice { padding: 22px 28px; border: 1px dashed #3A3B42; background: var(--panel); color: var(--dim-steel); font-size: 15px; line-height: 1.6; margin-top: 28px; }
+.notice strong { color: var(--bright-paper); font-weight: 500; }
+
+/* SECTIONS */
+section { padding: 100px 0; border-bottom: 1px solid var(--line); }
+.section-head { margin-bottom: 64px; max-width: 820px; }
+.section-head .mono { margin-bottom: 20px; }
+.section-head h2 { font-size: 48px; margin-bottom: 20px; }
+.section-head p { font-size: 19px; color: var(--dim-steel); line-height: 1.5; }
+
+/* PROBLEM LIST */
+.problem-list { display: grid; gap: 2px; background: var(--line); border: 1px solid var(--line); }
+.problem-item { background: var(--void-black); padding: 26px 32px; display: flex; gap: 24px; align-items: baseline; }
+.problem-item .num { font-family: Georgia, serif; font-size: 24px; color: var(--signal-lime); min-width: 48px; }
+.problem-item p { font-size: 18px; }
+
+/* HOW IT WORKS */
+.step { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 56px; align-items: center; padding: 56px 0; border-bottom: 1px solid var(--line); }
+.step:last-child { border-bottom: none; padding-bottom: 0; }
+.step:first-child { padding-top: 0; }
+.step-num { font-family: Georgia, serif; font-size: 48px; color: var(--signal-lime); line-height: 1; margin-bottom: 18px; }
+.step h3 { font-size: 30px; margin-bottom: 16px; }
+.step p { color: var(--dim-steel); font-size: 17px; line-height: 1.6; }
+.step p + p { margin-top: 14px; }
+.shot { border: 1px solid #2A2B33; box-shadow: 0 14px 36px rgba(0,0,0,0.35); background: #fff; }
+.shot-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; }
+.shot-trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; align-items: start; }
+
+/* WHAT YOU GET */
+.build-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--line); border: 1px solid var(--line); }
+.build-item { background: var(--void-black); padding: 36px 32px; }
+.build-item h3 { font-size: 22px; margin-bottom: 14px; }
+.build-item p { color: var(--dim-steel); font-size: 15px; line-height: 1.55; }
+
+/* TRUST */
+.trust-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; background: var(--line); border: 1px solid var(--line); }
+.trust-item { background: var(--panel); padding: 40px 36px; border-left: 2px solid var(--signal-lime); }
+.trust-item h3 { font-size: 24px; margin-bottom: 14px; }
+.trust-item p { color: var(--dim-steel); font-size: 16px; line-height: 1.6; }
+
+/* PROCESS */
+.process-step { padding: 32px 0; border-bottom: 1px solid var(--line); display: grid; grid-template-columns: 100px 220px 1fr; gap: 32px; align-items: baseline; }
+.process-step:last-child { border-bottom: none; }
+.process-step .n { font-family: Georgia, serif; font-size: 42px; color: var(--signal-lime); }
+.process-step .t { font-family: Georgia, serif; font-size: 22px; }
+.process-step .t small { display: block; font-family: Consolas, monospace; font-size: 12px; color: var(--dim-steel); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 6px; }
+.process-step .b { color: var(--dim-steel); font-size: 16px; line-height: 1.6; }
+
+/* FAQ */
+.faq-list { display: grid; gap: 2px; background: var(--line); border: 1px solid var(--line); }
+.faq-item { background: var(--void-black); padding: 32px; }
+.faq-item h4 { font-size: 20px; margin-bottom: 12px; }
+.faq-item p { color: var(--dim-steel); font-size: 16px; line-height: 1.6; }
+
+/* FINAL CTA */
+.final-cta { text-align: center; padding: 120px 0; }
+.final-cta .mono { margin-bottom: 24px; }
+.final-cta h2 { font-size: 54px; margin: 0 auto 24px; max-width: 860px; }
+.final-cta p { font-size: 20px; color: var(--dim-steel); max-width: 640px; margin: 0 auto 48px; }
+.final-cta .cta-row { justify-content: center; }
+.contact-line { margin-top: 36px; color: var(--dim-steel); font-size: 15px; }
+.contact-line a { color: var(--bright-paper); text-decoration: none; border-bottom: 1px solid #3A3B42; }
+.contact-line a:hover { color: var(--signal-lime); border-color: var(--signal-lime); }
+
+/* FOOTER */
+footer { padding: 48px 0; border-top: 1px solid var(--line); }
+footer .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+footer p { color: var(--dim-steel); font-size: 14px; }
+footer .foot-links { display: flex; gap: 24px; flex-wrap: wrap; }
+footer .foot-links a { color: var(--dim-steel); text-decoration: none; font-size: 14px; }
+footer .foot-links a:hover { color: var(--signal-lime); }
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .container { padding: 0 20px; }
+  .nav-links li:not(:last-child) { display: none; }
+  .hero { padding: 72px 0 60px; }
+  .hero h1 { font-size: 40px; }
+  .hero p.lead { font-size: 18px; }
+  .hero-shot { margin-top: 48px; }
+  section { padding: 64px 0; }
+  .section-head { margin-bottom: 40px; }
+  .section-head h2 { font-size: 32px; }
+  .step { grid-template-columns: 1fr; gap: 28px; padding: 40px 0; }
+  .step h3 { font-size: 26px; }
+  .shot-trio { grid-template-columns: 1fr; }
+  .build-grid, .trust-grid { grid-template-columns: 1fr; }
+  .process-step { grid-template-columns: 1fr; gap: 10px; padding: 24px 0; }
+  .process-step .n { font-size: 32px; }
+  .final-cta { padding: 72px 0; }
+  .final-cta h2 { font-size: 34px; }
+  footer .container { flex-direction: column; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ====== NAV ====== -->
+<nav>
+  <div class="container">
+    <a href="/" class="logo">Alt<span>o</span>rz</a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/#webApps">Services</a></li>
+      <li><a href="/mis-autopilot.html" class="active">MIS Autopilot</a></li>
+      <li><a href="/web-applications.html">Web Apps</a></li>
+      <li><a href="https://cal.com/altorz/discovery" class="btn btn-primary" style="padding: 10px 20px; font-size: 14px;">Free MIS Review</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ====== HERO ====== -->
+<header class="hero">
+  <div class="container">
+    <p class="mono">Altorz MIS Autopilot · Power BI + AI Reporting</p>
+    <h1>Your monthly sales &amp; collections MIS, <em>built and emailed automatically.</em></h1>
+    <p class="lead">
+      For distributors and manufacturers who still build the month-end report by hand.
+      Drop in your raw Tally or ERP exports. Get a Power BI dashboard, a plain-English
+      summary for the owner, and a PDF in their inbox. You approve it before it goes.
+    </p>
+    <div class="cta-row">
+      <a href="https://cal.com/altorz/discovery" class="btn btn-primary">Book a free 15-minute MIS review →</a>
+      <a href="#how-it-works" class="btn btn-secondary">See how it works</a>
+    </div>
+
+    <img class="hero-shot" src="/assets/images/mis/mis-03-dashboard.jpg" alt="MIS Autopilot Power BI dashboard showing sales vs target, collections, outstanding and receivables ageing" width="1415" height="806">
+    <p class="caption">The Sales MIS dashboard after one refresh: sales vs target, collections, outstanding, overdue, DSO and receivables ageing.</p>
+
+    <div class="notice">
+      <strong>About this demo:</strong> every screen on this page comes from a working build run on a
+      <strong>fictional distributor dataset</strong> (20,528 invoice lines, 5,066 receipts, 120 dealers,
+      40 SKUs, 15 sales reps). No client data is shown. Your build is done on your own exports, under NDA.
+    </div>
+  </div>
+</header>
+
+<!-- ====== PROBLEM ====== -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <p class="mono">01 · The Problem</p>
+      <h2>Month-end MIS shouldn't take three days of copy-paste.</h2>
+      <p>If any of these sound familiar, the report is costing you more than it should.</p>
+    </div>
+    <div class="problem-list">
+      <div class="problem-item"><span class="num">01</span><p>Someone exports sales and receipts from Tally or the ERP and pastes them into last month's Excel file.</p></div>
+      <div class="problem-item"><span class="num">02</span><p>Targets, dealer lists and rep mappings live in separate sheets that drift out of sync.</p></div>
+      <div class="problem-item"><span class="num">03</span><p>Receivables ageing and overdue lists get rebuilt from scratch every month.</p></div>
+      <div class="problem-item"><span class="num">04</span><p>The owner sees the numbers a week into the next month, and nobody writes down what they mean.</p></div>
+      <div class="problem-item"><span class="num">05</span><p>Dealers who quietly stopped ordering get noticed months late.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== HOW IT WORKS ====== -->
+<section id="how-it-works" style="background: #0D0E13;">
+  <div class="container">
+    <div class="section-head">
+      <p class="mono">02 · How It Works</p>
+      <h2>Four steps. Raw exports in, <em>owner email out.</em></h2>
+      <p>Every screenshot below is from the working demo build.</p>
+    </div>
+
+    <div class="step">
+      <div>
+        <div class="step-num">01</div>
+        <h3>Drop in your raw exports</h3>
+        <p>Save the month's sales register and receipts exports into one folder, exactly as Tally or your ERP gives them: report headers, Indian date formats, text-formatted numbers and all.</p>
+        <p>No reformatting. No pasting into templates.</p>
+      </div>
+      <div>
+        <img class="shot" src="/assets/images/mis/mis-01-raw-erp-export.jpg" alt="Raw ERP sales register export with report header rows and unformatted data" loading="lazy">
+        <p class="caption">A raw monthly sales export, as it comes out of the system.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div>
+        <div class="step-num">02</div>
+        <h3>One refresh cleans and combines everything</h3>
+        <p>A Power Query pipeline reads every file in the folder, strips headers, fixes dates and numbers, removes duplicates, and joins sales to your dealer, SKU, rep and target masters.</p>
+        <p>New month? Add the file and refresh. Nothing to rebuild.</p>
+      </div>
+      <div>
+        <img class="shot" src="/assets/images/mis/mis-02-one-click-refresh.jpg" alt="Power BI refresh showing all tables loaded with row counts" loading="lazy">
+        <p class="caption">Refresh loads all tables: 20,528 sales lines and 5,066 receipts in the demo.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div>
+        <div class="step-num">03</div>
+        <h3>A dashboard that answers the owner's questions</h3>
+        <p>Sales vs target, achievement %, collections, outstanding, overdue, 90+ day dues, DSO and receivables ageing, with month and region filters.</p>
+        <p>Every number is calculated in the data model. In the demo, each total was checked against an independent answer key; on your build, against your current MIS.</p>
+      </div>
+      <div>
+        <img class="shot" src="/assets/images/mis/mis-04-dashboard-region-filter.jpg" alt="Dashboard filtered to a single region, with titles updating to match" loading="lazy">
+        <p class="caption">The same dashboard filtered to one region. Titles and targets follow the filter.</p>
+      </div>
+    </div>
+
+    <div class="step">
+      <div>
+        <div class="step-num">04</div>
+        <h3>AI writes the summary. You approve it. The owner gets it.</h3>
+        <p>The data model produces a facts pack of figures. An AI model turns those figures into a short owner summary with named actions: which dealers to chase, which regions are behind and by how much.</p>
+        <p>The draft comes to you first. Only after you click <strong style="color: var(--bright-paper); font-weight: 500;">Approve</strong> does the owner receive the email with the dashboard PDF attached.</p>
+      </div>
+      <div class="shot-trio">
+        <div>
+          <img class="shot" src="/assets/images/mis/mis-05-monthly-run-form.jpg" alt="Monthly run form for the report month, facts pack and dashboard PDF" loading="lazy">
+          <p class="caption">Monthly run form</p>
+        </div>
+        <div>
+          <img class="shot" src="/assets/images/mis/mis-06-approval-email.jpg" alt="Approval email with the AI-written draft and Approve or Decline buttons" loading="lazy">
+          <p class="caption">Approval email to you</p>
+        </div>
+        <div>
+          <img class="shot" src="/assets/images/mis/mis-07-owner-email.jpg" alt="Final owner email with the monthly summary and PDF attachment" loading="lazy">
+          <p class="caption">Email the owner receives</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== WHAT YOU GET ====== -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <p class="mono">03 · What You Get</p>
+      <h2>A reporting system, not a one-off report.</h2>
+    </div>
+    <div class="build-grid">
+      <div class="build-item"><h3>Automated data pipeline</h3><p>Power Query that reads your exports as they are, cleans them and joins them to your masters. Add next month's file and refresh.</p></div>
+      <div class="build-item"><h3>Sales &amp; collections dashboard</h3><p>Power BI dashboard covering sales vs target, collections, outstanding, overdue, ageing and DSO, with month and region filters.</p></div>
+      <div class="build-item"><h3>Checked numbers</h3><p>Totals reconciled against your current MIS before go-live, so the new report matches the numbers you already trust.</p></div>
+      <div class="build-item"><h3>AI-written owner summary</h3><p>A short, plain-English summary with actions that name the dealer, rep or region and the figure behind it.</p></div>
+      <div class="build-item"><h3>Approval before sending</h3><p>Nothing reaches the owner until you approve the draft. Decline it and nothing is sent.</p></div>
+      <div class="build-item"><h3>Monthly email with PDF</h3><p>The owner gets the summary and the dashboard PDF in their inbox. They don't need Power BI to read it.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== TRUST ====== -->
+<section style="background: #0D0E13;">
+  <div class="container">
+    <div class="section-head">
+      <p class="mono">04 · Your Numbers, Your Control</p>
+      <h2>The AI writes words. <em>It never makes up numbers.</em></h2>
+    </div>
+    <div class="trust-grid">
+      <div class="trust-item"><h3>Figures come from the data model</h3><p>Every number in the summary is calculated in the data model first. The AI only puts those figures into sentences, and it is told to flag any contradiction rather than guess.</p></div>
+      <div class="trust-item"><h3>A person reviews every email</h3><p>The approval step is built in. You read the draft, then approve or decline. No email goes out on its own.</p></div>
+      <div class="trust-item"><h3>NDA before your data</h3><p>We sign an NDA before you share a single export. Your files are used only to build and run your report.</p></div>
+      <div class="trust-item"><h3>Paid AI tiers for client data</h3><p>Client data is only processed on paid AI API tiers, never free ones. The demo on this page uses fictional data only.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== PROCESS ====== -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <p class="mono">05 · How We Start</p>
+      <h2>Start with a free 15-minute review.</h2>
+      <p>No commitment. If MIS Autopilot isn't the right fit for how you report, you'll hear that directly.</p>
+    </div>
+    <div>
+      <div class="process-step"><div class="n">01</div><div class="t">MIS Review<small>15 min · Free</small></div><div class="b">You show me how this month's MIS is built today. I show you the demo running and tell you what would change for your business.</div></div>
+      <div class="process-step"><div class="n">02</div><div class="t">Sample Exports<small>Under NDA</small></div><div class="b">You share one or two months of exports and your current report. I confirm the scope and give you a fixed quote.</div></div>
+      <div class="process-step"><div class="n">03</div><div class="t">Build &amp; Reconcile<small>Fixed scope</small></div><div class="b">I build the pipeline, dashboard and email flow on your data, then reconcile totals against your current MIS line by line.</div></div>
+      <div class="process-step"><div class="n">04</div><div class="t">Go Live<small>Monthly run</small></div><div class="b">From the next month-end, you drop the exports, refresh, approve the draft, and the owner gets the email.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FAQ ====== -->
+<section style="background: #0D0E13;">
+  <div class="container">
+    <div class="section-head">
+      <p class="mono">06 · Common Questions</p>
+      <h2>What people usually ask first.</h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item"><h4>Does it work with Tally?</h4><p>It's built to read standard CSV and Excel exports, like those from Tally and most ERPs. In the free review we look at your actual export format before anything is promised.</p></div>
+      <div class="faq-item"><h4>Does the owner need Power BI?</h4><p>No. The owner receives the summary and a PDF of the dashboard by email.</p></div>
+      <div class="faq-item"><h4>Can the AI get a number wrong?</h4><p>The AI doesn't calculate anything. It writes sentences around figures the data model has already calculated, and you read every draft before it is sent.</p></div>
+      <div class="faq-item"><h4>What if my reports look different from the demo?</h4><p>The demo is a starting point. Your build follows your regions, reps, targets and the KPIs your owner actually looks at.</p></div>
+      <div class="faq-item"><h4>Is this real client data?</h4><p>No. Everything on this page is a demo built on a fictional distributor dataset. No client data is ever shown publicly.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FINAL CTA ====== -->
+<section class="final-cta">
+  <div class="container">
+    <p class="mono">Free 15-minute MIS review</p>
+    <h2>Show me this month's MIS. <em>I'll show you the automated version.</em></h2>
+    <p>Bring your current report. You'll see the demo running and know in 15 minutes whether this fits.</p>
+    <div class="cta-row">
+      <a href="https://cal.com/altorz/discovery" class="btn btn-primary">Book the free review →</a>
+      <a href="https://wa.me/919082034763" class="btn btn-secondary" target="_blank" rel="noopener">WhatsApp me</a>
+    </div>
+    <p class="contact-line"><a href="mailto:krish@altorz.com">krish@altorz.com</a> &nbsp;·&nbsp; WhatsApp / Call: <a href="tel:+919082034763">+91 90820 34763</a></p>
+  </div>
+</section>
+
+<!-- ====== FOOTER ====== -->
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Altorz · Reporting Systems for Businesses</p>
+    <div class="foot-links">
+      <a href="/">Home</a>
+      <a href="/web-applications.html">Web Apps</a>
+      <a href="mailto:krish@altorz.com">krish@altorz.com</a>
+      <a href="https://cal.com/altorz/discovery">Book a Call</a>
+      <a href="https://linkedin.com/in/krishborade">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
